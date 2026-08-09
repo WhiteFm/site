@@ -2,6 +2,18 @@ const supportedLanguages = ['en', 'ru', 'sv'];
 const defaultLanguage = 'en';
 let currentLanguage = localStorage.getItem('wsguild_lang') || defaultLanguage;
 
+function flattenTranslations(groups, translations = {}) {
+    Object.entries(groups).forEach(([key, value]) => {
+        if (value && typeof value === 'object' && !Array.isArray(value)) {
+            flattenTranslations(value, translations);
+        } else {
+            translations[key] = value;
+        }
+    });
+
+    return translations;
+}
+
 if (window.location.pathname.endsWith('/index.html')) {
     const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
     window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
@@ -19,7 +31,8 @@ async function loadTranslations(language) {
             throw new Error(`Translation request failed: ${response.status}`);
         }
 
-        const translations = await response.json();
+        const translationGroups = await response.json();
+        const translations = flattenTranslations(translationGroups);
 
         document.querySelectorAll('[data-i18n]').forEach((element) => {
             const key = element.dataset.i18n;

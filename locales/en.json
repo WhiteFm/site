@@ -1,141 +1,165 @@
 {
-  "meta_home_title": "WSGuild",
-  "meta_home_description": "WSGuild creates workshops and tools for digital adventures.",
-  "meta_products_title": "WSGuild — Workshops",
-  "meta_products_description": "Independent workshops by WSGuild.",
-  "meta_tools_title": "WSGuild — Tools",
-  "meta_tools_description": "Practical tools by WSGuild.",
-  "meta_tutorials_title": "WSGuild — Tutorials",
-  "meta_tutorials_description": "Tutorial videos for WSGuild workshops and tools.",
-
-  "brand_name": "WSGuild",
-  "main_logo_alt": "WSGuild",
-  "ccl_logo_alt": "CCL",
-  "aria_home_logo": "WSGuild home",
-  "aria_primary_navigation": "Primary navigation",
-  "aria_language_switcher": "Language selection",
-  "aria_guild_overview": "WSGuild overview",
-
-  "lang_en_short": "EN",
-  "lang_ru_short": "RU",
-  "lang_en_label": "English",
-  "lang_ru_label": "Russian",
-  "lang_sv_short": "SV",
-  "lang_sv_label": "Swedish",
-
-  "nav_home": "Home",
-  "nav_products": "Workshops",
-  "nav_tools": "Tools",
-  "nav_tutorials": "Tutorials",
-  "nav_store": "Store",
-  "nav_ccl": "CCL",
-
-  "hero_eyebrow": "Digital workshops",
-  "hero_title": "Welcome to the Guild",
-  "hero_desc": "We create thoughtful tools and workshops that make digital adventures easier to create, develop, and play with friends.",
-  "hero_btn": "Explore workshops",
-  "hero_secondary": "Explore tools",
-  "intro_text": "One guild — independent workshops and practical tools for players and creators.",
-
-  "programs_eyebrow": "Project preview",
-  "programs_title": "Our workshops",
-  "programs_lead": "Choose a direction and enter the part of the guild dedicated to it.",
-  "program_1_title": "Guild Cartograph",
-  "program_1_desc": "Create your own locations, from a shed to entire kingdoms. Compatible with Guild Tabletop.",
-  "program_2_title": "Guild Tabletop",
-  "program_2_desc": "Bring your adventure to life with friends.",
-  "program_3_title": "Guild Character Creation List",
-  "program_3_desc": "Create and manage your character. Compatible with Guild Tabletop.",
-  "btn_view_products": "LEARN MORE",
-  "btn_view_tools": "LEARN MORE",
-  "btn_visit_ccl": "OPEN CCL",
-
-  "callout_eyebrow": "Created by the Guild",
-  "callout_title": "Create and play your own adventure without unnecessary complexity.",
-  "callout_text": "Tutorial videos are available for every tool and workshop.",
-  "callout_tutorials_btn": "TUTORIALS",
-
-  "products_eyebrow": "WSGuild presents",
-  "products_title": "WORKSHOPS",
-  "products_intro": "Standalone programs created as complete projects to simplify the realization of your boldest ideas.",
-  "product_status": "FREE",
-  "product_ccl_title": "Guild Character Creation List",
-  "product_ccl_desc": "A dedicated workspace for creating characters. CCL makes the process clear, structured, and convenient to use during play.",
-  "product_ccl_feature_1": "A clear step-by-step creation process",
-  "product_ccl_feature_2": "Important character information in one place",
-  "product_ccl_feature_3": "A focused interface for long creative sessions",
-  "btn_launch_ccl": "OPEN CCL",
-
-  "principles_eyebrow": "Workshop principles",
-  "principles_title": "How we create workshops",
-  "principle_1_number": "01",
-  "principle_1_title": "Focused",
-  "principle_1_desc": "Each project solves a clear problem without unnecessary overload.",
-  "principle_2_number": "02",
-  "principle_2_title": "Clear",
-  "principle_2_desc": "The interface explains itself, and important actions are always close at hand.",
-  "principle_3_number": "03",
-  "principle_3_title": "Evolving",
-  "principle_3_desc": "Projects grow through practical improvements and feedback.",
-
-  "tools_eyebrow": "Specialized utilities for real tasks",
-  "tools_title": "Guild tools",
-  "tools_intro": "Compact utilities that simplify routine work and keep useful actions close at hand.",
-  "tools_catalog_eyebrow": "Tool cabinet",
-  "tools_catalog_title": "What is here",
-  "tools_catalog_intro": "This section is prepared for specialized utilities grouped by purpose.",
-  "tool_type_utility": "Utility",
-  "tool_type_creative": "Creative",
-  "tool_type_data": "Data",
-  "tool_status_planned": "Planned",
-  "tool_1_title": "Workflow tools",
-  "tool_1_desc": "Helpers that remove repetitive steps and keep frequent actions close at hand.",
-  "tool_2_title": "Creative utilities",
-  "tool_2_desc": "Focused spaces for organizing ideas, references, and reusable materials.",
-  "tool_3_title": "Data helpers",
-  "tool_3_desc": "Simple tools for preparing, checking, and transferring useful information.",
-  "tools_note_title": "The tool cabinet is being filled",
-  "tools_note_text": "This page is ready for real tool cards once their names, links, and release statuses are known.",
-
-  "tutorials_eyebrow": "WSGuild Academy",
-  "tutorials_title": "TUTORIALS",
-  "tutorials_intro": "A collection of clear video guides for Guild workshops and tools.",
-  "tutorials_library_eyebrow": "Guild video archive",
-  "tutorials_library_title": "Choose a video",
-  "tutorials_library_intro": "Open a lesson from the list and learn at your own pace.",
-
-  "tutorials_empty_title": "The archive is being prepared",
-  "tutorials_empty_text": "New videos will appear here as the library grows.",
-
-  "tutorials_play_label": "Play video",
-  "tutorials_pause_label": "Pause video",
-  "tutorials_controls_label": "Video controls",
-  "tutorials_progress_label": "Video progress",
-  "tutorials_mute_label": "Mute sound",
-  "tutorials_unmute_label": "Turn sound on",
-  "tutorials_volume_label": "Volume",
-  "tutorials_fullscreen_label": "Open fullscreen",
-
-  "tutorials_no_lesson_index": "—",
-  "tutorials_now_playing": "Now playing",
-  "tutorials_no_lesson_title": "Choose a video",
-  "tutorials_no_lesson_description": "A description of the selected material will appear here.",
-
-  "tutorials_playlist_eyebrow": "Archive contents",
-  "tutorials_playlist_title": "Tutorials",
-  "tutorials_playlist_intro": "The list updates automatically from the video catalog.",
-
-  "tutorials_lessons_empty": "No tutorial videos have been added yet.",
-  "tutorials_open_lesson_label": "Open video",
-  "tutorials_duration_pending": "--:--",
-
-  "tutorials_video_error_title": "The video could not be opened",
-  "tutorials_video_error_text": "Check that the file is in the videos folder and supported by your browser.",
-  "tutorials_catalog_error_title": "The archive could not be loaded",
-  "tutorials_catalog_error_text": "Check the videos catalog and reload the page.",
-
-  "tutorials_roll_title": "Roll",
-  "tutorials_roll_description": "A test video from the Guild archive.",
-
-  "footer_text": "© WSGuild. All rights reserved."
+  "metadata": {
+    "meta_home_title": "WSGuild",
+    "meta_home_description": "WSGuild creates workshops and tools for digital adventures.",
+    "meta_products_title": "WSGuild — Workshops",
+    "meta_products_description": "Independent workshops by WSGuild.",
+    "meta_tools_title": "WSGuild — Tools",
+    "meta_tools_description": "Practical tools by WSGuild.",
+    "meta_tutorials_title": "WSGuild — Tutorials",
+    "meta_tutorials_description": "Tutorial videos for WSGuild workshops and tools."
+  },
+  "common": {
+    "brand_name": "WSGuild",
+    "main_logo_alt": "WSGuild",
+    "ccl_logo_alt": "CCL",
+    "aria_home_logo": "WSGuild home",
+    "aria_primary_navigation": "Primary navigation",
+    "aria_language_switcher": "Language selection",
+    "aria_guild_overview": "WSGuild overview"
+  },
+  "languages": {
+    "lang_en_short": "EN",
+    "lang_ru_short": "RU",
+    "lang_en_label": "English",
+    "lang_ru_label": "Russian",
+    "lang_sv_short": "SV",
+    "lang_sv_label": "Swedish"
+  },
+  "navigation": {
+    "nav_home": "Home",
+    "nav_products": "Workshops",
+    "nav_tools": "Tools",
+    "nav_tutorials": "Tutorials",
+    "nav_store": "Store",
+    "nav_ccl": "CCL"
+  },
+  "home": {
+    "hero": {
+      "hero_eyebrow": "Digital workshops",
+      "hero_title": "Welcome to the Guild",
+      "hero_desc": "We create thoughtful tools and workshops that make digital adventures easier to create, develop, and play with friends.",
+      "hero_btn": "Explore workshops",
+      "hero_secondary": "Explore tools",
+      "intro_text": "One guild — independent workshops and practical tools for players and creators."
+    },
+    "programs": {
+      "programs_eyebrow": "Project preview",
+      "programs_title": "Our workshops",
+      "programs_lead": "Choose a direction and enter the part of the guild dedicated to it.",
+      "program_1_title": "Guild Cartograph",
+      "program_1_desc": "Create your own locations, from a shed to entire kingdoms. Compatible with Guild Tabletop.",
+      "program_2_title": "Guild Tabletop",
+      "program_2_desc": "Bring your adventure to life with friends.",
+      "program_3_title": "Guild Character Creation List",
+      "program_3_desc": "Create and manage your character. Compatible with Guild Tabletop.",
+      "btn_view_products": "LEARN MORE",
+      "btn_view_tools": "LEARN MORE",
+      "btn_visit_ccl": "OPEN CCL"
+    },
+    "callout": {
+      "callout_eyebrow": "Created by the Guild",
+      "callout_title": "Create and play your own adventure without unnecessary complexity.",
+      "callout_text": "Tutorial videos are available for every tool and workshop.",
+      "callout_tutorials_btn": "TUTORIALS"
+    }
+  },
+  "workshops": {
+    "overview": {
+      "products_eyebrow": "WSGuild presents",
+      "products_title": "WORKSHOPS",
+      "products_intro": "Standalone programs created as complete projects to simplify the realization of your boldest ideas.",
+      "product_status": "FREE",
+      "product_ccl_title": "Guild Character Creation List",
+      "product_ccl_desc": "A dedicated workspace for creating characters. CCL makes the process clear, structured, and convenient to use during play.",
+      "product_ccl_feature_1": "A clear step-by-step creation process",
+      "product_ccl_feature_2": "Important character information in one place",
+      "product_ccl_feature_3": "A focused interface for long creative sessions",
+      "btn_launch_ccl": "OPEN CCL"
+    },
+    "principles": {
+      "principles_eyebrow": "Workshop principles",
+      "principles_title": "How we create workshops",
+      "principle_1_number": "01",
+      "principle_1_title": "Focused",
+      "principle_1_desc": "Each project solves a clear problem without unnecessary overload.",
+      "principle_2_number": "02",
+      "principle_2_title": "Clear",
+      "principle_2_desc": "The interface explains itself, and important actions are always close at hand.",
+      "principle_3_number": "03",
+      "principle_3_title": "Evolving",
+      "principle_3_desc": "Projects grow through practical improvements and feedback."
+    }
+  },
+  "tools": {
+    "tools_eyebrow": "Specialized utilities for real tasks",
+    "tools_title": "Guild tools",
+    "tools_intro": "Compact utilities that simplify routine work and keep useful actions close at hand.",
+    "tools_catalog_eyebrow": "Tool cabinet",
+    "tools_catalog_title": "What is here",
+    "tools_catalog_intro": "This section is prepared for specialized utilities grouped by purpose.",
+    "tool_type_utility": "Utility",
+    "tool_type_creative": "Creative",
+    "tool_type_data": "Data",
+    "tool_status_planned": "Planned",
+    "tool_1_title": "Workflow tools",
+    "tool_1_desc": "Helpers that remove repetitive steps and keep frequent actions close at hand.",
+    "tool_2_title": "Creative utilities",
+    "tool_2_desc": "Focused spaces for organizing ideas, references, and reusable materials.",
+    "tool_3_title": "Data helpers",
+    "tool_3_desc": "Simple tools for preparing, checking, and transferring useful information.",
+    "tools_note_title": "The tool cabinet is being filled",
+    "tools_note_text": "This page is ready for real tool cards once their names, links, and release statuses are known."
+  },
+  "tutorials": {
+    "overview": {
+      "tutorials_eyebrow": "WSGuild Academy",
+      "tutorials_title": "TUTORIALS",
+      "tutorials_intro": "A collection of clear video guides for Guild workshops and tools.",
+      "tutorials_library_eyebrow": "Guild video archive",
+      "tutorials_library_title": "Choose a video",
+      "tutorials_library_intro": "Open a lesson from the list and learn at your own pace."
+    },
+    "empty_state": {
+      "tutorials_empty_title": "The archive is being prepared",
+      "tutorials_empty_text": "New videos will appear here as the library grows."
+    },
+    "player_controls": {
+      "tutorials_play_label": "Play video",
+      "tutorials_pause_label": "Pause video",
+      "tutorials_controls_label": "Video controls",
+      "tutorials_progress_label": "Video progress",
+      "tutorials_mute_label": "Mute sound",
+      "tutorials_unmute_label": "Turn sound on",
+      "tutorials_volume_label": "Volume",
+      "tutorials_fullscreen_label": "Open fullscreen"
+    },
+    "current_video": {
+      "tutorials_no_lesson_index": "—",
+      "tutorials_now_playing": "Now playing",
+      "tutorials_no_lesson_title": "Choose a video",
+      "tutorials_no_lesson_description": "A description of the selected material will appear here."
+    },
+    "playlist": {
+      "tutorials_playlist_eyebrow": "Archive contents",
+      "tutorials_playlist_title": "Tutorials",
+      "tutorials_playlist_intro": "",
+      "tutorials_lessons_empty": "No tutorial videos have been added yet.",
+      "tutorials_open_lesson_label": "Open video",
+      "tutorials_duration_pending": "--:--"
+    },
+    "errors": {
+      "tutorials_video_error_title": "The video could not be opened",
+      "tutorials_video_error_text": "Check that the file is in the videos folder and supported by your browser.",
+      "tutorials_catalog_error_title": "The archive could not be loaded",
+      "tutorials_catalog_error_text": "Check the videos catalog and reload the page."
+    },
+    "videos": {
+      "tutorials_roll_title": "Roll",
+      "tutorials_roll_description": "A test video from the Guild archive."
+    }
+  },
+  "footer": {
+    "footer_text": "© WSGuild. All rights reserved."
+  }
 }

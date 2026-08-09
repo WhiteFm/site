@@ -1,141 +1,165 @@
 {
-  "meta_home_title": "WSGuild",
-  "meta_home_description": "WSGuild skapar verkstäder och verktyg för digitala äventyr.",
-  "meta_products_title": "WSGuild — Verkstäder",
-  "meta_products_description": "Fristående verkstäder från WSGuild.",
-  "meta_tools_title": "WSGuild — Verktyg",
-  "meta_tools_description": "Praktiska verktyg från WSGuild.",
-  "meta_tutorials_title": "WSGuild — Guider",
-  "meta_tutorials_description": "Instruktionsvideor för WSGuilds verkstäder och verktyg.",
-
-  "brand_name": "WSGuild",
-  "main_logo_alt": "WSGuild",
-  "ccl_logo_alt": "CCL",
-  "aria_home_logo": "WSGuilds startsida",
-  "aria_primary_navigation": "Huvudnavigering",
-  "aria_language_switcher": "Språkval",
-  "aria_guild_overview": "Översikt över WSGuild",
-
-  "lang_en_short": "EN",
-  "lang_ru_short": "RU",
-  "lang_en_label": "Engelska",
-  "lang_ru_label": "Ryska",
-  "lang_sv_short": "SV",
-  "lang_sv_label": "Svenska",
-
-  "nav_home": "Hem",
-  "nav_products": "Verkstäder",
-  "nav_tools": "Verktyg",
-  "nav_tutorials": "Guider",
-  "nav_store": "Butik",
-  "nav_ccl": "CCL",
-
-  "hero_eyebrow": "Digitala verkstäder",
-  "hero_title": "Välkommen till Gillet",
-  "hero_desc": "Vi skapar genomtänkta verktyg och verkstäder som gör digitala äventyr enklare att skapa, utveckla och spela tillsammans med vänner.",
-  "hero_btn": "Utforska verkstäderna",
-  "hero_secondary": "Utforska verktygen",
-  "intro_text": "Ett gille — fristående verkstäder och praktiska verktyg för spelare och skapare.",
-
-  "programs_eyebrow": "Projektöversikt",
-  "programs_title": "Våra verkstäder",
-  "programs_lead": "Välj en inriktning och gå till den del av gillet som ägnas åt den.",
-  "program_1_title": "Guild Cartograph",
-  "program_1_desc": "Skapa egna platser, från ett skjul till hela kungariken. Kompatibel med Guild Tabletop.",
-  "program_2_title": "Guild Tabletop",
-  "program_2_desc": "Ge liv åt ditt äventyr tillsammans med vänner.",
-  "program_3_title": "Guild Character Creation List",
-  "program_3_desc": "Skapa och hantera din rollfigur. Kompatibel med Guild Tabletop.",
-  "btn_view_products": "LÄS MER",
-  "btn_view_tools": "LÄS MER",
-  "btn_visit_ccl": "ÖPPNA CCL",
-
-  "callout_eyebrow": "Skapat av Gillet",
-  "callout_title": "Skapa och spela ditt eget äventyr utan onödiga komplikationer.",
-  "callout_text": "Det finns instruktionsvideor för varje verktyg och verkstad.",
-  "callout_tutorials_btn": "GUIDER",
-
-  "products_eyebrow": "WSGuild presenterar",
-  "products_title": "VERKSTÄDER",
-  "products_intro": "Fristående program skapade som kompletta projekt för att förenkla förverkligandet av dina djärvaste idéer.",
-  "product_status": "GRATIS",
-  "product_ccl_title": "Guild Character Creation List",
-  "product_ccl_desc": "En separat arbetsyta för att skapa rollfigurer. CCL gör processen tydlig, strukturerad och praktisk att använda under spelet.",
-  "product_ccl_feature_1": "En tydlig stegvis skapandeprocess",
-  "product_ccl_feature_2": "Viktig information om rollfiguren på ett ställe",
-  "product_ccl_feature_3": "Ett fokuserat gränssnitt för långa kreativa sessioner",
-  "btn_launch_ccl": "ÖPPNA CCL",
-
-  "principles_eyebrow": "Verkstadens principer",
-  "principles_title": "Så skapar vi verkstäder",
-  "principle_1_number": "01",
-  "principle_1_title": "Fokuserat",
-  "principle_1_desc": "Varje projekt löser en tydlig uppgift utan onödig överbelastning.",
-  "principle_2_number": "02",
-  "principle_2_title": "Tydligt",
-  "principle_2_desc": "Gränssnittet förklarar sig självt och viktiga åtgärder finns alltid nära till hands.",
-  "principle_3_number": "03",
-  "principle_3_title": "Under utveckling",
-  "principle_3_desc": "Projekten växer genom praktiska förbättringar och återkoppling.",
-
-  "tools_eyebrow": "Specialiserade verktyg för verkliga uppgifter",
-  "tools_title": "Gillets verktyg",
-  "tools_intro": "Kompakta verktyg som förenklar rutinarbete och håller användbara funktioner nära till hands.",
-  "tools_catalog_eyebrow": "Verktygsskåpet",
-  "tools_catalog_title": "Vad som finns här",
-  "tools_catalog_intro": "Avsnittet är förberett för specialiserade verktyg grupperade efter användningsområde.",
-  "tool_type_utility": "Verktyg",
-  "tool_type_creative": "Kreativt",
-  "tool_type_data": "Data",
-  "tool_status_planned": "Planerad",
-  "tool_1_title": "Arbetsflödesverktyg",
-  "tool_1_desc": "Hjälpmedel som tar bort upprepade steg och håller vanliga åtgärder nära till hands.",
-  "tool_2_title": "Kreativa verktyg",
-  "tool_2_desc": "Fokuserade utrymmen för att organisera idéer, referenser och återanvändbart material.",
-  "tool_3_title": "Datahjälpmedel",
-  "tool_3_desc": "Enkla verktyg för att förbereda, kontrollera och överföra användbar information.",
-  "tools_note_title": "Verktygsskåpet fylls på",
-  "tools_note_text": "Sidan är redo för riktiga verktygskort när deras namn, länkar och lanseringsstatus är kända.",
-
-  "tutorials_eyebrow": "WSGuild-akademin",
-  "tutorials_title": "GUIDER",
-  "tutorials_intro": "En samling tydliga videoguider för Gillets verkstäder och verktyg.",
-  "tutorials_library_eyebrow": "Gillets videoarkiv",
-  "tutorials_library_title": "Välj en video",
-  "tutorials_library_intro": "Öppna en lektion från listan och lär dig i din egen takt.",
-
-  "tutorials_empty_title": "Arkivet förbereds",
-  "tutorials_empty_text": "Nya videor visas här allt eftersom biblioteket växer.",
-
-  "tutorials_play_label": "Spela upp videon",
-  "tutorials_pause_label": "Pausa videon",
-  "tutorials_controls_label": "Videokontroller",
-  "tutorials_progress_label": "Videoförlopp",
-  "tutorials_mute_label": "Stäng av ljudet",
-  "tutorials_unmute_label": "Slå på ljudet",
-  "tutorials_volume_label": "Volym",
-  "tutorials_fullscreen_label": "Öppna i helskärm",
-
-  "tutorials_no_lesson_index": "—",
-  "tutorials_now_playing": "Spelas nu",
-  "tutorials_no_lesson_title": "Välj en video",
-  "tutorials_no_lesson_description": "En beskrivning av det valda materialet visas här.",
-
-  "tutorials_playlist_eyebrow": "Arkivets innehåll",
-  "tutorials_playlist_title": "Guider",
-  "tutorials_playlist_intro": "Listan uppdateras automatiskt från videokatalogen.",
-
-  "tutorials_lessons_empty": "Inga instruktionsvideor har lagts till ännu.",
-  "tutorials_open_lesson_label": "Öppna video",
-  "tutorials_duration_pending": "--:--",
-
-  "tutorials_video_error_title": "Videon kunde inte öppnas",
-  "tutorials_video_error_text": "Kontrollera att filen finns i mappen videos och stöds av din webbläsare.",
-  "tutorials_catalog_error_title": "Arkivet kunde inte läsas in",
-  "tutorials_catalog_error_text": "Kontrollera katalogen videos och ladda om sidan.",
-
-  "tutorials_roll_title": "Roll",
-  "tutorials_roll_description": "En testvideo från Gillets arkiv.",
-
-  "footer_text": "© WSGuild. Alla rättigheter förbehållna."
+  "metadata": {
+    "meta_home_title": "WSGuild",
+    "meta_home_description": "WSGuild skapar verkstäder och verktyg för digitala äventyr.",
+    "meta_products_title": "WSGuild — Verkstäder",
+    "meta_products_description": "Fristående verkstäder från WSGuild.",
+    "meta_tools_title": "WSGuild — Verktyg",
+    "meta_tools_description": "Praktiska verktyg från WSGuild.",
+    "meta_tutorials_title": "WSGuild — Guider",
+    "meta_tutorials_description": "Instruktionsvideor för WSGuilds verkstäder och verktyg."
+  },
+  "common": {
+    "brand_name": "WSGuild",
+    "main_logo_alt": "WSGuild",
+    "ccl_logo_alt": "CCL",
+    "aria_home_logo": "WSGuilds startsida",
+    "aria_primary_navigation": "Huvudnavigering",
+    "aria_language_switcher": "Språkval",
+    "aria_guild_overview": "Översikt över WSGuild"
+  },
+  "languages": {
+    "lang_en_short": "EN",
+    "lang_ru_short": "RU",
+    "lang_en_label": "Engelska",
+    "lang_ru_label": "Ryska",
+    "lang_sv_short": "SV",
+    "lang_sv_label": "Svenska"
+  },
+  "navigation": {
+    "nav_home": "Hem",
+    "nav_products": "Verkstäder",
+    "nav_tools": "Verktyg",
+    "nav_tutorials": "Guider",
+    "nav_store": "Butik",
+    "nav_ccl": "CCL"
+  },
+  "home": {
+    "hero": {
+      "hero_eyebrow": "Digitala verkstäder",
+      "hero_title": "Välkommen till Gillet",
+      "hero_desc": "Vi skapar genomtänkta verktyg och verkstäder som gör digitala äventyr enklare att skapa, utveckla och spela tillsammans med vänner.",
+      "hero_btn": "Utforska verkstäderna",
+      "hero_secondary": "Utforska verktygen",
+      "intro_text": "Ett gille — fristående verkstäder och praktiska verktyg för spelare och skapare."
+    },
+    "programs": {
+      "programs_eyebrow": "Projektöversikt",
+      "programs_title": "Våra verkstäder",
+      "programs_lead": "Välj en inriktning och gå till den del av gillet som ägnas åt den.",
+      "program_1_title": "Guild Cartograph",
+      "program_1_desc": "Skapa egna platser, från ett skjul till hela kungariken. Kompatibel med Guild Tabletop.",
+      "program_2_title": "Guild Tabletop",
+      "program_2_desc": "Ge liv åt ditt äventyr tillsammans med vänner.",
+      "program_3_title": "Guild Character Creation List",
+      "program_3_desc": "Skapa och hantera din rollfigur. Kompatibel med Guild Tabletop.",
+      "btn_view_products": "LÄS MER",
+      "btn_view_tools": "LÄS MER",
+      "btn_visit_ccl": "ÖPPNA CCL"
+    },
+    "callout": {
+      "callout_eyebrow": "Skapat av Gillet",
+      "callout_title": "Skapa och spela ditt eget äventyr utan onödiga komplikationer.",
+      "callout_text": "Det finns instruktionsvideor för varje verktyg och verkstad.",
+      "callout_tutorials_btn": "GUIDER"
+    }
+  },
+  "workshops": {
+    "overview": {
+      "products_eyebrow": "WSGuild presenterar",
+      "products_title": "VERKSTÄDER",
+      "products_intro": "Fristående program skapade som kompletta projekt för att förenkla förverkligandet av dina djärvaste idéer.",
+      "product_status": "GRATIS",
+      "product_ccl_title": "Guild Character Creation List",
+      "product_ccl_desc": "En separat arbetsyta för att skapa rollfigurer. CCL gör processen tydlig, strukturerad och praktisk att använda under spelet.",
+      "product_ccl_feature_1": "En tydlig stegvis skapandeprocess",
+      "product_ccl_feature_2": "Viktig information om rollfiguren på ett ställe",
+      "product_ccl_feature_3": "Ett fokuserat gränssnitt för långa kreativa sessioner",
+      "btn_launch_ccl": "ÖPPNA CCL"
+    },
+    "principles": {
+      "principles_eyebrow": "Verkstadens principer",
+      "principles_title": "Så skapar vi verkstäder",
+      "principle_1_number": "01",
+      "principle_1_title": "Fokuserat",
+      "principle_1_desc": "Varje projekt löser en tydlig uppgift utan onödig överbelastning.",
+      "principle_2_number": "02",
+      "principle_2_title": "Tydligt",
+      "principle_2_desc": "Gränssnittet förklarar sig självt och viktiga åtgärder finns alltid nära till hands.",
+      "principle_3_number": "03",
+      "principle_3_title": "Under utveckling",
+      "principle_3_desc": "Projekten växer genom praktiska förbättringar och återkoppling."
+    }
+  },
+  "tools": {
+    "tools_eyebrow": "Specialiserade verktyg för verkliga uppgifter",
+    "tools_title": "Gillets verktyg",
+    "tools_intro": "Kompakta verktyg som förenklar rutinarbete och håller användbara funktioner nära till hands.",
+    "tools_catalog_eyebrow": "Verktygsskåpet",
+    "tools_catalog_title": "Vad som finns här",
+    "tools_catalog_intro": "Avsnittet är förberett för specialiserade verktyg grupperade efter användningsområde.",
+    "tool_type_utility": "Verktyg",
+    "tool_type_creative": "Kreativt",
+    "tool_type_data": "Data",
+    "tool_status_planned": "Planerad",
+    "tool_1_title": "Arbetsflödesverktyg",
+    "tool_1_desc": "Hjälpmedel som tar bort upprepade steg och håller vanliga åtgärder nära till hands.",
+    "tool_2_title": "Kreativa verktyg",
+    "tool_2_desc": "Fokuserade utrymmen för att organisera idéer, referenser och återanvändbart material.",
+    "tool_3_title": "Datahjälpmedel",
+    "tool_3_desc": "Enkla verktyg för att förbereda, kontrollera och överföra användbar information.",
+    "tools_note_title": "Verktygsskåpet fylls på",
+    "tools_note_text": "Sidan är redo för riktiga verktygskort när deras namn, länkar och lanseringsstatus är kända."
+  },
+  "tutorials": {
+    "overview": {
+      "tutorials_eyebrow": "WSGuild-akademin",
+      "tutorials_title": "GUIDER",
+      "tutorials_intro": "En samling tydliga videoguider för Gillets verkstäder och verktyg.",
+      "tutorials_library_eyebrow": "Gillets videoarkiv",
+      "tutorials_library_title": "Välj en video",
+      "tutorials_library_intro": "Öppna en lektion från listan och lär dig i din egen takt."
+    },
+    "empty_state": {
+      "tutorials_empty_title": "Arkivet förbereds",
+      "tutorials_empty_text": "Nya videor visas här allt eftersom biblioteket växer."
+    },
+    "player_controls": {
+      "tutorials_play_label": "Spela upp videon",
+      "tutorials_pause_label": "Pausa videon",
+      "tutorials_controls_label": "Videokontroller",
+      "tutorials_progress_label": "Videoförlopp",
+      "tutorials_mute_label": "Stäng av ljudet",
+      "tutorials_unmute_label": "Slå på ljudet",
+      "tutorials_volume_label": "Volym",
+      "tutorials_fullscreen_label": "Öppna i helskärm"
+    },
+    "current_video": {
+      "tutorials_no_lesson_index": "—",
+      "tutorials_now_playing": "Spelas nu",
+      "tutorials_no_lesson_title": "Välj en video",
+      "tutorials_no_lesson_description": "En beskrivning av det valda materialet visas här."
+    },
+    "playlist": {
+      "tutorials_playlist_eyebrow": "Arkivets innehåll",
+      "tutorials_playlist_title": "Guider",
+      "tutorials_playlist_intro": "",
+      "tutorials_lessons_empty": "Inga instruktionsvideor har lagts till ännu.",
+      "tutorials_open_lesson_label": "Öppna video",
+      "tutorials_duration_pending": "--:--"
+    },
+    "errors": {
+      "tutorials_video_error_title": "Videon kunde inte öppnas",
+      "tutorials_video_error_text": "Kontrollera att filen finns i mappen videos och stöds av din webbläsare.",
+      "tutorials_catalog_error_title": "Arkivet kunde inte läsas in",
+      "tutorials_catalog_error_text": "Kontrollera katalogen videos och ladda om sidan."
+    },
+    "videos": {
+      "tutorials_roll_title": "Roll",
+      "tutorials_roll_description": "En testvideo från Gillets arkiv."
+    }
+  },
+  "footer": {
+    "footer_text": "© WSGuild. Alla rättigheter förbehållna."
+  }
 }

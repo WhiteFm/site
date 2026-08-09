@@ -1,141 +1,165 @@
 {
-  "meta_home_title": "WSGuild",
-  "meta_home_description": "WSGuild создаёт мастерские и инструменты для цифровых приключений.",
-  "meta_products_title": "WSGuild — Мастерские",
-  "meta_products_description": "Самостоятельные мастерские от WSGuild.",
-  "meta_tools_title": "WSGuild — Инструменты",
-  "meta_tools_description": "Практичные инструменты от WSGuild.",
-  "meta_tutorials_title": "WSGuild — Обучение",
-  "meta_tutorials_description": "Обучающие видео для мастерских и инструментов WSGuild.",
-
-  "brand_name": "WSGuild",
-  "main_logo_alt": "WSGuild",
-  "ccl_logo_alt": "CCL",
-  "aria_home_logo": "Главная WSGuild",
-  "aria_primary_navigation": "Основная навигация",
-  "aria_language_switcher": "Выбор языка",
-  "aria_guild_overview": "Обзор WSGuild",
-
-  "lang_en_short": "EN",
-  "lang_ru_short": "RU",
-  "lang_en_label": "English",
-  "lang_ru_label": "Русский",
-  "lang_sv_short": "SV",
-  "lang_sv_label": "Svenska",
-
-  "nav_home": "Главная",
-  "nav_products": "Мастерские",
-  "nav_tools": "Инструменты",
-  "nav_tutorials": "Обучение",
-  "nav_store": "Магазин",
-  "nav_ccl": "CCL",
-
-  "hero_eyebrow": "Цифровые мастерские",
-  "hero_title": "Добро пожаловать в Гильдию",
-  "hero_desc": "Мы создаём продуманные инструменты и мастерские, с которыми цифровые приключения проще создавать, развивать и играть в них с друзьями.",
-  "hero_btn": "Изучить мастерские",
-  "hero_secondary": "Осмотреть инструменты",
-  "intro_text": "Одна гильдия - самостоятельные мастерские и практичные инструменты для игроков и создателей.",
-
-  "programs_eyebrow": "Превью проектов",
-  "programs_title": "Наши мастерские",
-  "programs_lead": "Выберите направление и перейдите в ту часть гильдии, которая ему посвящена.",
-  "program_1_title": "Guild Cartograph",
-  "program_1_desc": "Создавай собственные локации от сарая до целых королевств. Совместимо с Guild Tabletop.",
-  "program_2_title": "Guild Tabletop",
-  "program_2_desc": "Оживи своё приключение с друзьями.",
-  "program_3_title": "Guild Character Creation List",
-  "program_3_desc": "Создавай и управляй своим персонажем. Совместимо с Guild Tabletop.",
-  "btn_view_products": "ПОДРОБНЕЕ",
-  "btn_view_tools": "ПОДРОБНЕЕ",
-  "btn_visit_ccl": "ОТКРЫТЬ CCL",
-
-  "callout_eyebrow": "Создано Гильдией",
-  "callout_title": "Создавай и играй в своё приключение без лишних сложностей.",
-  "callout_text": "Для каждого инструмента и мастерской есть обучающие видеоролики.",
-  "callout_tutorials_btn": "ОБУЧЕНИЕ",
-
-  "products_eyebrow": "WSGuild представляет",
-  "products_title": "МАСТЕРСКИЕ",
-  "products_intro": "Самостоятельные программы, созданные как цельные проекты для упрощения реализации ваших самых смелых идей.",
-  "product_status": "БЕСПЛАТНО",
-  "product_ccl_title": "Guild Character Creation List",
-  "product_ccl_desc": "Отдельное рабочее пространство для создания персонажей. CCL помогает сделать процесс понятным, структурированным и удобным для использования в игре.",
-  "product_ccl_feature_1": "Понятный пошаговый процесс создания",
-  "product_ccl_feature_2": "Важные сведения о персонаже в одном месте",
-  "product_ccl_feature_3": "Сфокусированный интерфейс для долгих творческих сессий",
-  "btn_launch_ccl": "ОТКРЫТЬ CCL",
-
-  "principles_eyebrow": "Принципы мастерской",
-  "principles_title": "Как мы создаём мастерские",
-  "principle_1_number": "01",
-  "principle_1_title": "Сфокусированно",
-  "principle_1_desc": "Каждый проект решает понятную задачу и не перегружен лишним.",
-  "principle_2_number": "02",
-  "principle_2_title": "Понятно",
-  "principle_2_desc": "Интерфейс объясняет себя сам, а важные действия всегда рядом.",
-  "principle_3_number": "03",
-  "principle_3_title": "С развитием",
-  "principle_3_desc": "Проекты растут благодаря практичным улучшениям и обратной связи.",
-
-  "tools_eyebrow": "Специализированные утилиты для реальных задач",
-  "tools_title": "Инструменты Гильдии",
-  "tools_intro": "Компактные утилиты, которые упрощают рутинную работу и держат полезные действия под рукой.",
-  "tools_catalog_eyebrow": "Шкаф инструментов",
-  "tools_catalog_title": "Что находится здесь",
-  "tools_catalog_intro": "Раздел подготовлен для специализированных утилит, сгруппированных по назначению.",
-  "tool_type_utility": "Утилита",
-  "tool_type_creative": "Творчество",
-  "tool_type_data": "Данные",
-  "tool_status_planned": "В планах",
-  "tool_1_title": "Инструменты рабочего процесса",
-  "tool_1_desc": "Помощники, которые убирают повторяющиеся шаги и держат частые действия под рукой.",
-  "tool_2_title": "Творческие утилиты",
-  "tool_2_desc": "Сфокусированные пространства для организации идей, референсов и повторно используемых материалов.",
-  "tool_3_title": "Помощники для данных",
-  "tool_3_desc": "Простые инструменты для подготовки, проверки и переноса полезной информации.",
-  "tools_note_title": "Шкаф инструментов наполняется",
-  "tools_note_text": "Страница готова для настоящих карточек инструментов, когда будут известны их названия, ссылки и статусы выпуска.",
-
-  "tutorials_eyebrow": "Академия WSGuild",
-  "tutorials_title": "ОБУЧЕНИЕ",
-  "tutorials_intro": "Коллекция понятных видеоинструкций для мастерских и инструментов Гильдии.",
-  "tutorials_library_eyebrow": "Видеоархив Гильдии",
-  "tutorials_library_title": "Выберите видео",
-  "tutorials_library_intro": "Откройте урок из списка и изучайте материал в удобном темпе.",
-
-  "tutorials_empty_title": "Архив готовится",
-  "tutorials_empty_text": "Новые видео появятся здесь по мере наполнения библиотеки.",
-
-  "tutorials_play_label": "Воспроизвести видео",
-  "tutorials_pause_label": "Поставить видео на паузу",
-  "tutorials_controls_label": "Управление видео",
-  "tutorials_progress_label": "Прогресс видео",
-  "tutorials_mute_label": "Выключить звук",
-  "tutorials_unmute_label": "Включить звук",
-  "tutorials_volume_label": "Громкость",
-  "tutorials_fullscreen_label": "Открыть на весь экран",
-
-  "tutorials_no_lesson_index": "—",
-  "tutorials_now_playing": "Сейчас воспроизводится",
-  "tutorials_no_lesson_title": "Выберите видео",
-  "tutorials_no_lesson_description": "Здесь появится описание выбранного материала.",
-
-  "tutorials_playlist_eyebrow": "Содержание архива",
-  "tutorials_playlist_title": "Обучение",
-  "tutorials_playlist_intro": "Список обновляется автоматически из каталога видео.",
-
-  "tutorials_lessons_empty": "Обучающие видео пока не добавлены.",
-  "tutorials_open_lesson_label": "Открыть видео",
-  "tutorials_duration_pending": "--:--",
-
-  "tutorials_video_error_title": "Не удалось открыть видео",
-  "tutorials_video_error_text": "Проверьте, что файл находится в папке videos и поддерживается браузером.",
-  "tutorials_catalog_error_title": "Не удалось загрузить архив",
-  "tutorials_catalog_error_text": "Проверьте каталог videos и перезагрузите страницу.",
-
-  "tutorials_roll_title": "Roll",
-  "tutorials_roll_description": "Тестовое видео из архива Гильдии.",
-
-  "footer_text": "© WSGuild. Все права защищены."
+  "metadata": {
+    "meta_home_title": "WSGuild",
+    "meta_home_description": "WSGuild создаёт мастерские и инструменты для цифровых приключений.",
+    "meta_products_title": "WSGuild — Мастерские",
+    "meta_products_description": "Самостоятельные мастерские от WSGuild.",
+    "meta_tools_title": "WSGuild — Инструменты",
+    "meta_tools_description": "Практичные инструменты от WSGuild.",
+    "meta_tutorials_title": "WSGuild — Обучение",
+    "meta_tutorials_description": "Обучающие видео для мастерских и инструментов WSGuild."
+  },
+  "common": {
+    "brand_name": "WSGuild",
+    "main_logo_alt": "WSGuild",
+    "ccl_logo_alt": "CCL",
+    "aria_home_logo": "Главная WSGuild",
+    "aria_primary_navigation": "Основная навигация",
+    "aria_language_switcher": "Выбор языка",
+    "aria_guild_overview": "Обзор WSGuild"
+  },
+  "languages": {
+    "lang_en_short": "EN",
+    "lang_ru_short": "RU",
+    "lang_en_label": "English",
+    "lang_ru_label": "Русский",
+    "lang_sv_short": "SV",
+    "lang_sv_label": "Svenska"
+  },
+  "navigation": {
+    "nav_home": "Главная",
+    "nav_products": "Мастерские",
+    "nav_tools": "Инструменты",
+    "nav_tutorials": "Обучение",
+    "nav_store": "Магазин",
+    "nav_ccl": "CCL"
+  },
+  "home": {
+    "hero": {
+      "hero_eyebrow": "Цифровые мастерские",
+      "hero_title": "Добро пожаловать в Гильдию",
+      "hero_desc": "Мы создаём продуманные инструменты и мастерские, с которыми цифровые приключения проще создавать, развивать и играть в них с друзьями.",
+      "hero_btn": "Изучить мастерские",
+      "hero_secondary": "Осмотреть инструменты",
+      "intro_text": "Одна гильдия - самостоятельные мастерские и практичные инструменты для игроков и создателей."
+    },
+    "programs": {
+      "programs_eyebrow": "Превью проектов",
+      "programs_title": "Наши мастерские",
+      "programs_lead": "Выберите направление и перейдите в ту часть гильдии, которая ему посвящена.",
+      "program_1_title": "Guild Cartograph",
+      "program_1_desc": "Создавай собственные локации от сарая до целых королевств. Совместимо с Guild Tabletop.",
+      "program_2_title": "Guild Tabletop",
+      "program_2_desc": "Оживи своё приключение с друзьями.",
+      "program_3_title": "Guild Character Creation List",
+      "program_3_desc": "Создавай и управляй своим персонажем. Совместимо с Guild Tabletop.",
+      "btn_view_products": "ПОДРОБНЕЕ",
+      "btn_view_tools": "ПОДРОБНЕЕ",
+      "btn_visit_ccl": "ОТКРЫТЬ CCL"
+    },
+    "callout": {
+      "callout_eyebrow": "Создано Гильдией",
+      "callout_title": "Создавай и играй в своё приключение без лишних сложностей.",
+      "callout_text": "Для каждого инструмента и мастерской есть обучающие видеоролики.",
+      "callout_tutorials_btn": "ОБУЧЕНИЕ"
+    }
+  },
+  "workshops": {
+    "overview": {
+      "products_eyebrow": "WSGuild представляет",
+      "products_title": "МАСТЕРСКИЕ",
+      "products_intro": "Самостоятельные программы, созданные как цельные проекты для упрощения реализации ваших самых смелых идей.",
+      "product_status": "БЕСПЛАТНО",
+      "product_ccl_title": "Guild Character Creation List",
+      "product_ccl_desc": "Отдельное рабочее пространство для создания персонажей. CCL помогает сделать процесс понятным, структурированным и удобным для использования в игре.",
+      "product_ccl_feature_1": "Понятный пошаговый процесс создания",
+      "product_ccl_feature_2": "Важные сведения о персонаже в одном месте",
+      "product_ccl_feature_3": "Сфокусированный интерфейс для долгих творческих сессий",
+      "btn_launch_ccl": "ОТКРЫТЬ CCL"
+    },
+    "principles": {
+      "principles_eyebrow": "Принципы мастерской",
+      "principles_title": "Как мы создаём мастерские",
+      "principle_1_number": "01",
+      "principle_1_title": "Сфокусированно",
+      "principle_1_desc": "Каждый проект решает понятную задачу и не перегружен лишним.",
+      "principle_2_number": "02",
+      "principle_2_title": "Понятно",
+      "principle_2_desc": "Интерфейс объясняет себя сам, а важные действия всегда рядом.",
+      "principle_3_number": "03",
+      "principle_3_title": "С развитием",
+      "principle_3_desc": "Проекты растут благодаря практичным улучшениям и обратной связи."
+    }
+  },
+  "tools": {
+    "tools_eyebrow": "Специализированные утилиты для реальных задач",
+    "tools_title": "Инструменты Гильдии",
+    "tools_intro": "Компактные утилиты, которые упрощают рутинную работу и держат полезные действия под рукой.",
+    "tools_catalog_eyebrow": "Шкаф инструментов",
+    "tools_catalog_title": "Что находится здесь",
+    "tools_catalog_intro": "Раздел подготовлен для специализированных утилит, сгруппированных по назначению.",
+    "tool_type_utility": "Утилита",
+    "tool_type_creative": "Творчество",
+    "tool_type_data": "Данные",
+    "tool_status_planned": "В планах",
+    "tool_1_title": "Инструменты рабочего процесса",
+    "tool_1_desc": "Помощники, которые убирают повторяющиеся шаги и держат частые действия под рукой.",
+    "tool_2_title": "Творческие утилиты",
+    "tool_2_desc": "Сфокусированные пространства для организации идей, референсов и повторно используемых материалов.",
+    "tool_3_title": "Помощники для данных",
+    "tool_3_desc": "Простые инструменты для подготовки, проверки и переноса полезной информации.",
+    "tools_note_title": "Шкаф инструментов наполняется",
+    "tools_note_text": "Страница готова для настоящих карточек инструментов, когда будут известны их названия, ссылки и статусы выпуска."
+  },
+  "tutorials": {
+    "overview": {
+      "tutorials_eyebrow": "Академия WSGuild",
+      "tutorials_title": "ОБУЧЕНИЕ",
+      "tutorials_intro": "Коллекция понятных видеоинструкций для мастерских и инструментов Гильдии.",
+      "tutorials_library_eyebrow": "Видеоархив Гильдии",
+      "tutorials_library_title": "Выберите видео",
+      "tutorials_library_intro": "Откройте урок из списка и изучайте материал в удобном темпе."
+    },
+    "empty_state": {
+      "tutorials_empty_title": "Архив готовится",
+      "tutorials_empty_text": "Новые видео появятся здесь по мере наполнения библиотеки."
+    },
+    "player_controls": {
+      "tutorials_play_label": "Воспроизвести видео",
+      "tutorials_pause_label": "Поставить видео на паузу",
+      "tutorials_controls_label": "Управление видео",
+      "tutorials_progress_label": "Прогресс видео",
+      "tutorials_mute_label": "Выключить звук",
+      "tutorials_unmute_label": "Включить звук",
+      "tutorials_volume_label": "Громкость",
+      "tutorials_fullscreen_label": "Открыть на весь экран"
+    },
+    "current_video": {
+      "tutorials_no_lesson_index": "—",
+      "tutorials_now_playing": "Сейчас воспроизводится",
+      "tutorials_no_lesson_title": "Выберите видео",
+      "tutorials_no_lesson_description": "Здесь появится описание выбранного материала."
+    },
+    "playlist": {
+      "tutorials_playlist_eyebrow": "Содержание архива",
+      "tutorials_playlist_title": "Обучение",
+      "tutorials_playlist_intro": "",
+      "tutorials_lessons_empty": "Обучающие видео пока не добавлены.",
+      "tutorials_open_lesson_label": "Открыть видео",
+      "tutorials_duration_pending": "--:--"
+    },
+    "errors": {
+      "tutorials_video_error_title": "Не удалось открыть видео",
+      "tutorials_video_error_text": "Проверьте, что файл находится в папке videos и поддерживается браузером.",
+      "tutorials_catalog_error_title": "Не удалось загрузить архив",
+      "tutorials_catalog_error_text": "Проверьте каталог videos и перезагрузите страницу."
+    },
+    "videos": {
+      "tutorials_roll_title": "Roll",
+      "tutorials_roll_description": "Тестовое видео из архива Гильдии."
+    }
+  },
+  "footer": {
+    "footer_text": "© WSGuild. Все права защищены."
+  }
 }
