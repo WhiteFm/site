@@ -3,89 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WSGuild creates focused products and tools for digital adventures.">
     <title>WSGuild</title>
-    <link rel="icon" type="image/png" href="/icons/WSGuild.png">
-
-    <!-- Подключаем основной стиль (для десктопа) -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Подключаем МОБИЛЬНЫЙ стиль отдельным файлом (до 800px) -->
-    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 800px)">
+    <link rel="icon" type="image/png" href="icons/Main_Logo.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
 </head>
-<body>
-
-    <!-- Навигация (Шапка Гильдии) -->
+<body data-page-title="meta_home_title">
     <header class="navbar">
         <div class="logo">
-            <a href="index.html">
-                <!-- Правильный путь и расширение логотипа -->
-                <img src="icons/WSGuild.png" alt="WS Guild Logo" class="site-logo">
+            <a href="/index.html" aria-label="WSGuild">
+                <img src="icons/Main_Logo.svg" alt="WSGuild" class="site-logo">
+                <span class="logo-wordmark">WSGuild</span>
             </a>
         </div>
-        <nav>
-            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
-            <a href="htmls/products.html" data-i18n="nav_products">Products</a>
-            <a href="htmls/addons.html" data-i18n="nav_addons">Addons</a>
-            <!-- Внешние ссылки -->
-            <a href="https://store.wsguild.net" target="_blank" data-i18n="nav_store">Store</a>
-            <a href="https://ccl.wsguild.net" target="_blank" data-i18n="nav_ccl">CCL</a>
+
+        <nav aria-label="Primary navigation">
+            <a href="/index.html" class="active" aria-current="page" data-i18n="nav_home">Home</a>
+            <a href="/htmls/products.html" data-i18n="nav_products">Products</a>
+            <a href="/htmls/tools.html" data-i18n="nav_tools">Tools</a>
+            <a href="https://store.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_store">Store</a>
+            <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_ccl">CCL</a>
         </nav>
 
-        <!-- Переключатель языков -->
-        <div class="lang-switcher">
-            <button onclick="changeLang('en')" id="btn-en">EN</button>
-            <button onclick="changeLang('ru')" id="btn-ru">RU</button>
+        <div class="lang-switcher" aria-label="Language">
+            <button type="button" onclick="changeLang('en')" id="btn-en" aria-label="English">EN</button>
+            <button type="button" onclick="changeLang('ru')" id="btn-ru" aria-label="Русский">RU</button>
         </div>
     </header>
 
-    <!-- Главный блок (Вход в таверну/гильдию) -->
     <main>
-        <section class="hero">
+        <section class="hero hero-home">
             <div class="hero-content">
+                <p class="eyebrow" data-i18n="hero_eyebrow">Digital workshop & guild</p>
                 <h1 data-i18n="hero_title">Welcome to the Guild</h1>
-                <p data-i18n="hero_desc">Forge your digital legacy. We craft the finest tools, programs, and addons for your grandest adventures.</p>
-                <a href="#programs" class="btn-primary" data-i18n="hero_btn">Explore Our Arsenal</a>
+                <p data-i18n="hero_desc">We create focused tools and extensions that make digital adventures easier to build, manage and share.</p>
+                <div class="hero-actions">
+                    <a href="/htmls/products.html" class="btn-primary" data-i18n="hero_btn">Explore our projects</a>
+                    <a href="/htmls/tools.html" class="btn-text" data-i18n="hero_secondary">Browse tools</a>
+                </div>
             </div>
         </section>
 
-        <!-- Блок о программах (Арсенал) -->
-        <section id="programs" class="programs">
-            <h2 class="section-title" data-i18n="programs_title">Our Mastercrafts</h2>
-            <div class="grid">
+        <section class="intro-strip" aria-label="WSGuild overview">
+            <p data-i18n="intro_text">One guild, several workshops: standalone products and practical tools for players and creators.</p>
+        </section>
 
-                <!-- Карточка Программы 1 -->
-                <div class="card">
-                    <div class="card-icon">📜</div>
-                    <h3 data-i18n="program_1_title">Project Arcana</h3>
-                    <p data-i18n="program_1_desc">A powerful engine designed to streamline your world-building process. Manage lore, items, and quests with ease.</p>
-                    <a href="htmls/products.html" class="btn-secondary" data-i18n="btn_learn_more">Learn More</a>
-                </div>
-
-                <!-- Карточка Программы 2 -->
-                <div class="card">
-                    <div class="card-icon">🛡️</div>
-                    <h3 data-i18n="program_2_title">Forge Warden</h3>
-                    <p data-i18n="program_2_desc">The ultimate protection and optimization suite. Keep your projects safe from the darkest bugs and glitches.</p>
-                    <a href="htmls/products.html" class="btn-secondary" data-i18n="btn_learn_more">Learn More</a>
-                </div>
-
-                <!-- Карточка Программы 3 (CCL Тизер) -->
-                <div class="card highlight-card">
-                    <div class="card-icon">🧙‍♂️</div>
-                    <h3 data-i18n="program_3_title">Character Creation List (CCL)</h3>
-                    <p data-i18n="program_3_desc">Our flagship independent platform. Breathe life into your heroes with the most detailed generator ever forged.</p>
-                    <a href="https://ccl.wsguild.net" target="_blank" class="btn-secondary" data-i18n="btn_visit_ccl">Visit CCL</a>
-                </div>
-
+        <section class="programs" aria-labelledby="programs-heading">
+            <div class="section-heading">
+                <p class="eyebrow" data-i18n="programs_eyebrow">Project preview</p>
+                <h2 id="programs-heading" class="section-title" data-i18n="programs_title">Our workshops</h2>
+                <p data-i18n="programs_lead">Choose a direction and enter the part of the guild built around it.</p>
             </div>
+
+            <div class="grid program-grid">
+                <article class="card program-card">
+                    <div class="card-icon" aria-hidden="true">📜</div>
+                    <div class="card-content">
+                        <h3 data-i18n="program_1_title">Guild Products</h3>
+                        <p data-i18n="program_1_desc">Standalone projects created in our workshop: clear, focused and ready for real use.</p>
+                    </div>
+                    <a href="/htmls/products.html" class="btn-secondary" data-i18n="btn_view_products">View products</a>
+                </article>
+
+                <article class="card program-card">
+                    <div class="card-icon" aria-hidden="true">🛡️</div>
+                    <div class="card-content">
+                        <h3 data-i18n="program_2_title">Guild Tools</h3>
+                        <p data-i18n="program_2_desc">Focused utilities that solve everyday tasks and fit naturally into existing workflows.</p>
+                    </div>
+                    <a href="/htmls/tools.html" class="btn-secondary" data-i18n="btn_view_tools">View tools</a>
+                </article>
+
+                <article class="card program-card highlight-card">
+                    <div class="card-icon ccl-icon">
+                        <img src="https://ccl.wsguild.net/icon/CCL.png" alt="CCL">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="program_3_title">Character Creation List</h3>
+                        <p data-i18n="program_3_desc">CCL is a structured character-creation companion that keeps ideas, choices and important details together in one convenient workspace.</p>
+                    </div>
+                    <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" class="btn-secondary" data-i18n="btn_visit_ccl">Open CCL</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="guild-callout">
+            <div>
+                <p class="eyebrow" data-i18n="callout_eyebrow">Made by the guild</p>
+                <h2 data-i18n="callout_title">Useful craft, without unnecessary complexity</h2>
+            </div>
+            <p data-i18n="callout_text">Every section has its own purpose, but all projects share the same visual language and attention to detail.</p>
         </section>
     </main>
 
     <footer class="guild-footer">
-        <p data-i18n="footer_text">© WSGuild. All rights reserved by the Council.</p>
+        <p data-i18n="footer_text">© WSGuild. All rights reserved.</p>
     </footer>
 
-    <!-- Подключаем скрипт -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>

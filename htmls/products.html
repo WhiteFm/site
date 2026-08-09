@@ -2,9 +2,89 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Standalone products created by WSGuild.">
+    <title>Products — WSGuild</title>
+    <link rel="icon" type="image/png" href="/icons/WSGuild.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
 </head>
-<body>
+<body data-page-title="meta_products_title">
+    <header class="navbar">
+        <div class="logo">
+            <a href="/index.html" aria-label="WSGuild">
+                <img src="/icons/WSGuild.png" alt="WSGuild" class="site-logo">
+                <span class="logo-wordmark">WSGuild</span>
+            </a>
+        </div>
+        <nav aria-label="Primary navigation">
+            <a href="/index.html" data-i18n="nav_home">Home</a>
+            <a href="/htmls/products.html" class="active" aria-current="page" data-i18n="nav_products">Products</a>
+            <a href="/htmls/tools.html" data-i18n="nav_tools">Tools</a>
+            <a href="https://store.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_store">Store</a>
+            <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_ccl">CCL</a>
+        </nav>
+        <div class="lang-switcher" aria-label="Language">
+            <button type="button" onclick="changeLang('en')" id="btn-en" aria-label="English">EN</button>
+            <button type="button" onclick="changeLang('ru')" id="btn-ru" aria-label="Русский">RU</button>
+        </div>
+    </header>
 
+    <main>
+        <section class="page-hero products-hero">
+            <div class="page-hero-content">
+                <p class="eyebrow" data-i18n="products_eyebrow">The main workshop</p>
+                <h1 data-i18n="products_title">Guild products</h1>
+                <p data-i18n="products_intro">Independent tools designed as complete experiences — from the first idea to everyday use.</p>
+            </div>
+            <div class="hero-mark" aria-hidden="true">P</div>
+        </section>
+
+        <section class="content-section">
+            <div class="feature-panel product-feature">
+                <div class="feature-copy">
+                    <span class="status-badge" data-i18n="product_status">Flagship project</span>
+                    <h2>Character Creation List</h2>
+                    <p data-i18n="product_ccl_desc">A dedicated workspace for building characters step by step. CCL helps keep the process readable, structured and easy to revisit.</p>
+                    <ul class="feature-list">
+                        <li data-i18n="product_ccl_feature_1">A clear, guided creation flow</li>
+                        <li data-i18n="product_ccl_feature_2">Important character details in one place</li>
+                        <li data-i18n="product_ccl_feature_3">A focused interface for long creative sessions</li>
+                    </ul>
+                    <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" class="btn-primary" data-i18n="btn_launch_ccl">Launch CCL</a>
+                </div>
+                <a class="feature-emblem" href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" aria-label="Character Creation List">
+                    <img src="https://ccl.wsguild.net/icon/CCL.png" alt="CCL">
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section principles-section">
+            <div class="section-heading align-left">
+                <p class="eyebrow" data-i18n="principles_eyebrow">Workshop principles</p>
+                <h2 class="section-title" data-i18n="principles_title">How we approach products</h2>
+            </div>
+            <div class="principles-grid">
+                <article class="mini-card">
+                    <span>01</span>
+                    <h3 data-i18n="principle_1_title">Focused</h3>
+                    <p data-i18n="principle_1_desc">Each project solves a clear problem without becoming overloaded.</p>
+                </article>
+                <article class="mini-card">
+                    <span>02</span>
+                    <h3 data-i18n="principle_2_title">Readable</h3>
+                    <p data-i18n="principle_2_desc">The interface explains itself and keeps important actions close.</p>
+                </article>
+                <article class="mini-card">
+                    <span>03</span>
+                    <h3 data-i18n="principle_3_title">Evolving</h3>
+                    <p data-i18n="principle_3_desc">Projects grow through practical improvements and feedback.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="guild-footer"><p data-i18n="footer_text">© WSGuild. All rights reserved.</p></footer>
+    <script src="/js/main.js"></script>
 </body>
 </html>
