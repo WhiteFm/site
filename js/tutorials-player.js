@@ -29,8 +29,46 @@
     let lessons = [];
     let activeLessonIndex = -1;
     let translations = window.wsguildTranslations || {};
+    let lastAudibleVolume = 1;
+    const volumeStorageKey = 'wsguild-tutorials-player-volume';
 
     const text = (key) => translations[key] || '';
+
+    const restoreVolume = () => {
+        try {
+            const savedState = JSON.parse(localStorage.getItem(volumeStorageKey));
+
+            if (!savedState || typeof savedState !== 'object') {
+                return;
+            }
+
+            if (Number.isFinite(savedState.volume)) {
+                video.volume = Math.min(1, Math.max(0, savedState.volume));
+            }
+
+            if (Number.isFinite(savedState.lastAudibleVolume) && savedState.lastAudibleVolume > 0) {
+                lastAudibleVolume = Math.min(1, savedState.lastAudibleVolume);
+            } else if (video.volume > 0) {
+                lastAudibleVolume = video.volume;
+            }
+
+            video.muted = Boolean(savedState.muted);
+        } catch (error) {
+            console.warn('Unable to restore the saved player volume.', error);
+        }
+    };
+
+    const saveVolume = () => {
+        try {
+            localStorage.setItem(volumeStorageKey, JSON.stringify({
+                volume: video.volume,
+                muted: video.muted,
+                lastAudibleVolume
+            }));
+        } catch (error) {
+            console.warn('Unable to save the player volume.', error);
+        }
+    };
 
     const formatTime = (seconds) => {
         if (!Number.isFinite(seconds) || seconds < 0) {
@@ -191,14 +229,31 @@
     });
 
     elements.volume.addEventListener('click', () => {
-        video.muted = !video.muted;
+        if (video.muted || video.volume === 0) {
+            video.muted = false;
+
+            if (video.volume === 0) {
+                video.volume = lastAudibleVolume;
+            }
+        } else {
+            lastAudibleVolume = video.volume;
+            video.muted = true;
+        }
+
         updateVolumeState();
+        saveVolume();
     });
 
     elements.volumeRange.addEventListener('input', () => {
         video.muted = false;
         video.volume = Number(elements.volumeRange.value);
+
+        if (video.volume > 0) {
+            lastAudibleVolume = video.volume;
+        }
+
         updateVolumeState();
+        saveVolume();
     });
 
     elements.fullscreen.addEventListener('click', () => {
@@ -222,6 +277,8 @@
     });
 
     const initialize = async () => {
+        restoreVolume();
+
         try {
             const response = await fetch('/videos/catalog.json', { cache: 'no-store' });
 

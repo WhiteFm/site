@@ -200,13 +200,41 @@
 }
 
 .video-controls {
+    position: relative;
     grid-template-columns: auto minmax(0, 1fr) auto auto auto;
     gap: 0.55rem;
     padding: 0.8rem;
+    overflow: visible;
 }
 
 .volume-range {
-    display: none;
+    position: absolute;
+    z-index: 12;
+    right: calc(0.8rem + 38px + 0.55rem);
+    bottom: calc(100% - 0.2rem);
+    display: block;
+    width: 124px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(14, 10, 9, 0.96);
+    box-shadow: var(--panel-shadow);
+    pointer-events: none;
+    transform: translateY(0.65rem) scale(0.96);
+    transform-origin: right bottom;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+#player-volume:hover + .volume-range,
+#player-volume:focus + .volume-range,
+.volume-range:hover,
+.volume-range:focus {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
 }
 
 .video-time {
