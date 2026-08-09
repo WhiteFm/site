@@ -225,15 +225,17 @@ h6 {
 .hero-background-logo {
     position: absolute;
     z-index: 0;
-    top: 48%;
-    left: 50%;
-    width: clamp(540px, 57vw, 780px);
+    inset: 0;
+    width: 100%;
+    height: 100%;
     max-width: none;
+    padding: clamp(0.75rem, 2vw, 1.5rem);
     /* Видимость фонового логотипа: 0 — скрыт, 1 — полностью видим */
     opacity: 0.5;
     pointer-events: none;
     user-select: none;
-    transform: translate(-50%, -50%);
+    object-fit: contain;
+    object-position: center;
     filter: saturate(0.55) contrast(0.85) brightness(0.72);
     mix-blend-mode: soft-light;
 }
@@ -477,8 +479,19 @@ h6 {
     font-size: 2.3rem;
 }
 
-.guild-callout > p {
+.callout-action > p {
     color: var(--text-muted);
+}
+
+.callout-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.callout-button {
+    width: fit-content;
+    margin-top: 1.4rem;
 }
 
 .page-hero {
@@ -504,6 +517,299 @@ h6 {
         linear-gradient(90deg, rgba(194, 151, 107, 0.08), transparent 46%),
         radial-gradient(circle at 80% 50%, rgba(194, 151, 107, 0.2), transparent 25%),
         var(--bg-panel);
+}
+
+.tutorials-hero {
+    background:
+        linear-gradient(90deg, rgba(114, 24, 23, 0.2), transparent 48%),
+        radial-gradient(circle at 80% 50%, rgba(194, 151, 107, 0.16), transparent 26%),
+        var(--bg-panel);
+}
+
+.tutorials-section {
+    width: min(1280px, calc(100% - 4rem));
+    margin: 0 auto;
+    padding: 4.5rem 0 6rem;
+}
+
+.tutorials-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.65fr) minmax(300px, 0.55fr);
+    align-items: start;
+    gap: 2rem;
+}
+
+.video-shell,
+.lesson-panel {
+    border: 1px solid var(--border-color);
+    background: linear-gradient(150deg, var(--bg-panel-light), var(--bg-panel));
+    box-shadow: var(--panel-shadow);
+}
+
+.video-shell {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-shell::before {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 50%;
+    width: 52%;
+    height: 1px;
+    content: '';
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--gold-tan), transparent);
+    transform: translateX(-50%);
+}
+
+.video-stage {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, rgba(114, 24, 23, 0.18), transparent 38%),
+        var(--bg-deep);
+}
+
+.video-stage video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #050404;
+}
+
+.video-empty,
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+}
+
+.video-empty {
+    z-index: 2;
+    padding: 2rem;
+    text-align: center;
+    background:
+        linear-gradient(rgba(7, 6, 6, 0.82), rgba(7, 6, 6, 0.92)),
+        url('/icons/Elipse/Main_Logo.svg') center / min(58%, 390px) no-repeat;
+}
+
+.video-empty[hidden],
+.video-overlay[hidden] {
+    display: none;
+}
+
+.video-empty-mark {
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 1.25rem;
+    border: 1px solid var(--gold-tan);
+    border-radius: 50%;
+    color: var(--gold-light);
+    background: rgba(114, 24, 23, 0.28);
+    font-size: 2rem;
+}
+
+.video-empty h2 {
+    margin-bottom: 0.55rem;
+    color: var(--text-main);
+    font-size: 2rem;
+}
+
+.video-empty p {
+    max-width: 500px;
+    color: var(--text-muted);
+}
+
+.video-overlay {
+    z-index: 3;
+    border: 0;
+    color: var(--text-main);
+    background: rgba(7, 6, 6, 0.26);
+    cursor: pointer;
+}
+
+.video-overlay-play {
+    display: grid;
+    place-items: center;
+    width: 82px;
+    height: 82px;
+    padding-left: 5px;
+    border: 1px solid var(--gold-tan);
+    border-radius: 50%;
+    background: rgba(114, 24, 23, 0.9);
+    box-shadow: 0 0 0 10px rgba(114, 24, 23, 0.15), 0 12px 34px rgba(0, 0, 0, 0.48);
+    font-size: 1.8rem;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.video-overlay:hover .video-overlay-play {
+    transform: scale(1.06);
+    background: var(--accent-hover);
+}
+
+.video-controls {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto auto auto auto;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.15rem;
+    border-top: 1px solid var(--border-color);
+    background: rgba(10, 8, 8, 0.94);
+}
+
+.player-button {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--gold-light);
+    background: var(--bg-panel);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.player-button:hover:not(:disabled) {
+    border-color: var(--gold-tan);
+    color: var(--text-main);
+}
+
+.player-button:disabled,
+.player-range:disabled {
+    cursor: not-allowed;
+    opacity: 0.36;
+}
+
+.player-range {
+    width: 100%;
+    accent-color: var(--accent-hover);
+    cursor: pointer;
+}
+
+.video-time {
+    min-width: 94px;
+    color: var(--text-muted);
+    font-family: 'Forum', serif;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+.volume-range {
+    width: 82px;
+}
+
+.now-playing {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.1rem;
+    align-items: center;
+    min-height: 96px;
+    padding: 1.3rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.now-playing-index {
+    color: var(--accent-hover);
+    font-family: 'Forum', serif;
+    font-size: 1.05rem;
+}
+
+.now-playing .eyebrow {
+    margin-bottom: 0.25rem;
+}
+
+.now-playing h2 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.45rem;
+}
+
+.now-playing-description {
+    margin: 0.35rem 0 0;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.lesson-panel {
+    position: sticky;
+    top: 104px;
+    overflow: hidden;
+}
+
+.lesson-panel-header {
+    padding: 1.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.lesson-panel-header h2 {
+    margin-bottom: 0.45rem;
+    color: var(--text-main);
+    font-size: 2rem;
+}
+
+.lesson-panel-header p {
+    color: var(--text-muted);
+}
+
+.lesson-list {
+    display: grid;
+    max-height: 610px;
+    overflow-y: auto;
+}
+
+.lesson-empty {
+    padding: 2rem 1.8rem;
+    color: var(--text-muted);
+}
+
+.lesson-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.9rem;
+    align-items: center;
+    width: 100%;
+    padding: 1.15rem 1.4rem;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+    background: transparent;
+    font-family: 'Alegreya', serif;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.lesson-item:hover,
+.lesson-item.active {
+    background: rgba(114, 24, 23, 0.2);
+}
+
+.lesson-item.active {
+    box-shadow: inset 3px 0 var(--accent-hover);
+}
+
+.lesson-number {
+    color: var(--gold-tan);
+    font-family: 'Forum', serif;
+}
+
+.lesson-title {
+    font-size: 1.05rem;
+}
+
+.lesson-duration {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 .page-hero-content {

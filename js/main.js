@@ -51,6 +51,11 @@ async function loadTranslations(language) {
             document.title = translations[titleKey];
         }
 
+        window.wsguildTranslations = translations;
+        document.dispatchEvent(new CustomEvent('wsguild:languagechange', {
+            detail: { language, translations }
+        }));
+
         document.documentElement.lang = language;
         document.getElementById('btn-en')?.classList.toggle('active', language === 'en');
         document.getElementById('btn-ru')?.classList.toggle('active', language === 'ru');

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" data-i18n-attr-content="meta_tutorials_description">
+    <title></title>
+    <link rel="icon" type="image/svg+xml" href="/icons/Elipse/Main_Logo.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+</head>
+<body data-page-title="meta_tutorials_title">
+    <header class="navbar">
+        <div class="logo">
+            <a href="/" aria-label="" data-i18n-attr-aria-label="aria_home_logo">
+                <img src="/icons/Main_Logo.svg" alt="" class="site-logo" data-i18n-attr-alt="main_logo_alt">
+                <span class="logo-wordmark" data-i18n="brand_name"></span>
+            </a>
+        </div>
+        <nav aria-label="" data-i18n-attr-aria-label="aria_primary_navigation">
+            <a href="/" data-i18n="nav_home"></a>
+            <a href="/workshops/" data-i18n="nav_products"></a>
+            <a href="/tools/" data-i18n="nav_tools"></a>
+            <a href="/tutorials/" class="active" aria-current="page" data-i18n="nav_tutorials"></a>
+            <a href="https://store.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_store"></a>
+            <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_ccl"></a>
+        </nav>
+        <div class="lang-switcher" aria-label="" data-i18n-attr-aria-label="aria_language_switcher">
+            <button type="button" onclick="changeLang('en')" id="btn-en" aria-label="" data-i18n="lang_en_short" data-i18n-attr-aria-label="lang_en_label"></button>
+            <button type="button" onclick="changeLang('ru')" id="btn-ru" aria-label="" data-i18n="lang_ru_short" data-i18n-attr-aria-label="lang_ru_label"></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero tutorials-hero">
+            <div class="page-hero-content">
+                <p class="eyebrow" data-i18n="tutorials_eyebrow"></p>
+                <h1 data-i18n="tutorials_title"></h1>
+                <p data-i18n="tutorials_intro"></p>
+            </div>
+            <div class="hero-mark" aria-hidden="true">
+                <img src="/icons/Elipse/Main_Logo.svg" alt="">
+            </div>
+        </section>
+
+        <section class="tutorials-section" aria-labelledby="tutorials-player-heading">
+            <div class="section-heading align-left">
+                <p class="eyebrow" data-i18n="tutorials_library_eyebrow"></p>
+                <h2 id="tutorials-player-heading" class="section-title" data-i18n="tutorials_library_title"></h2>
+                <p data-i18n="tutorials_library_intro"></p>
+            </div>
+
+            <div class="tutorials-layout">
+                <div class="video-shell">
+                    <div class="video-stage">
+                        <video id="tutorial-video" playsinline preload="metadata"></video>
+
+                        <div class="video-empty" id="video-empty">
+                            <div>
+                                <div class="video-empty-mark" aria-hidden="true">✦</div>
+                                <h2 id="video-empty-title" data-i18n="tutorials_empty_title"></h2>
+                                <p id="video-empty-text" data-i18n="tutorials_empty_text"></p>
+                            </div>
+                        </div>
+
+                        <button class="video-overlay" id="video-overlay" type="button" hidden aria-label="" data-i18n-attr-aria-label="tutorials_play_label">
+                            <span class="video-overlay-play" aria-hidden="true">▶</span>
+                        </button>
+                    </div>
+
+                    <div class="video-controls" aria-label="" data-i18n-attr-aria-label="tutorials_controls_label">
+                        <button class="player-button" id="player-play" type="button" disabled aria-label="" data-i18n-attr-aria-label="tutorials_play_label"><span id="player-play-icon" aria-hidden="true">▶</span></button>
+                        <input class="player-range" id="player-progress" type="range" min="0" max="1000" value="0" disabled aria-label="" data-i18n-attr-aria-label="tutorials_progress_label">
+                        <span class="video-time" id="video-time">00:00 / 00:00</span>
+                        <button class="player-button" id="player-volume" type="button" disabled aria-label="" data-i18n-attr-aria-label="tutorials_mute_label"><span id="player-volume-icon" aria-hidden="true">◆</span></button>
+                        <input class="player-range volume-range" id="volume-range" type="range" min="0" max="1" step="0.05" value="1" disabled aria-label="" data-i18n-attr-aria-label="tutorials_volume_label">
+                        <button class="player-button" id="player-fullscreen" type="button" disabled aria-label="" data-i18n-attr-aria-label="tutorials_fullscreen_label"><span aria-hidden="true">⛶</span></button>
+                    </div>
+
+                    <div class="now-playing">
+                        <span class="now-playing-index" id="now-playing-index" data-i18n="tutorials_no_lesson_index"></span>
+                        <div>
+                            <p class="eyebrow" data-i18n="tutorials_now_playing"></p>
+                            <h2 id="now-playing-title" data-i18n="tutorials_no_lesson_title"></h2>
+                            <p class="now-playing-description" id="now-playing-description" data-i18n="tutorials_no_lesson_description"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="lesson-panel">
+                    <div class="lesson-panel-header">
+                        <p class="eyebrow" data-i18n="tutorials_playlist_eyebrow"></p>
+                        <h2 data-i18n="tutorials_playlist_title"></h2>
+                        <p data-i18n="tutorials_playlist_intro"></p>
+                    </div>
+                    <div class="lesson-list" id="lesson-list">
+                        <p class="lesson-empty" id="lesson-empty" data-i18n="tutorials_lessons_empty"></p>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="guild-footer"><p data-i18n="footer_text"></p></footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/tutorials-player.js"></script>
+</body>
+</html>

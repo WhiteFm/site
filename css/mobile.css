@@ -36,8 +36,10 @@
 }
 
 .hero-background-logo {
-    top: 46%;
-    width: 570px;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.75rem;
 }
 
 .hero h1 {
@@ -102,6 +104,11 @@
     width: calc(100% - 2rem);
     margin-bottom: 4rem;
     padding: 2rem 1.5rem;
+}
+
+.callout-button {
+    width: 100%;
+    max-width: 320px;
 }
 
 .guild-callout h2 {
@@ -177,6 +184,56 @@
     width: calc(100% - 2rem);
     margin-bottom: 4rem;
     padding: 1.5rem;
+}
+
+.tutorials-section {
+    width: calc(100% - 2rem);
+    padding: 3rem 0 4rem;
+}
+
+.tutorials-layout {
+    grid-template-columns: 1fr;
+}
+
+.lesson-panel {
+    position: static;
+}
+
+.video-controls {
+    grid-template-columns: auto minmax(0, 1fr) auto auto auto;
+    gap: 0.55rem;
+    padding: 0.8rem;
+}
+
+.volume-range {
+    display: none;
+}
+
+.video-time {
+    min-width: 76px;
+    font-size: 0.88rem;
+}
+
+.now-playing {
+    padding: 1rem;
+}
+
+.video-empty {
+    padding: 1.2rem;
+}
+
+.video-empty-mark,
+.video-overlay-play {
+    width: 64px;
+    height: 64px;
+}
+
+.video-empty h2 {
+    font-size: 1.45rem;
+}
+
+.video-empty p {
+    font-size: 0.95rem;
 }
 
 .guild-footer {
