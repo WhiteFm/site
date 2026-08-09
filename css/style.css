@@ -1,0 +1,279 @@
+/* Подключаем шрифты из Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&family=Forum&display=swap');
+
+/* --- Цветовая палитра из логотипа Logo.jpg --- */
+:root {
+    --bg-main: #0a0808;       /* Идеально черный/темный, как края логотипа */
+    --bg-panel: #1a1412;      /* Темно-коричневый для карточек/шапки */
+    --accent-red: #721817;    /* Темно-красный из букв и компаса */
+    --accent-hover: #96201f;  /* Светло-красный для наведения на кнопки */
+    --gold-tan: #c2976b;      /* Песочно-золотой из лучей компаса */
+    --text-main: #fdfdfd;     /* Белый текст, как буквы WS */
+    --text-muted: #a39581;    /* Приглушенный песочный для описаний */
+    --border-color: #3b2a22;  /* Цвет линий из внутренних колец компаса */
+}
+
+/* Сброс базовых стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Настройки для всего сайта */
+body {
+    font-family: 'Alegreya', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-main);
+    background-color: var(--bg-main);
+    min-height: 100vh;
+}
+
+/* Настройки для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Forum', serif;
+    font-weight: 400;
+    color: var(--gold-tan); /* Золотой цвет выглядит лучше на темном фоне */
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+}
+
+/* --- Шапка Гильдии (Navbar) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-panel);
+    padding: 1rem 3rem;
+    border-bottom: 2px solid var(--accent-red);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Стилизация изображения логотипа */
+.logo a {
+    display: flex;
+    align-items: center;
+}
+
+.site-logo {
+    max-width: 128px;
+    max-height: 128px;
+    display: block;
+    border: 2px solid var(--border-color); /* Легкая рамка в стиле колец компаса */
+    border-radius: 4px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-red);
+}
+
+.navbar nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-family: 'Forum', serif;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: var(--gold-tan);
+}
+
+/* Подчеркивание при наведении */
+.navbar nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: var(--gold-tan);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after {
+    width: 100%;
+}
+
+/* --- Переключатель языков --- */
+.lang-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-switcher button {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-family: 'Forum', serif;
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.lang-switcher button:hover {
+    border-color: var(--gold-tan);
+    color: var(--gold-tan);
+}
+
+.lang-switcher button.active {
+    background-color: var(--accent-red);
+    color: var(--text-main);
+    border-color: var(--accent-red);
+}
+
+/* --- Главный блок (Hero) --- */
+.hero {
+    text-align: center;
+    padding: 6rem 2rem;
+    position: relative;
+    border-bottom: 1px dashed var(--border-color);
+    background: radial-gradient(circle at center, var(--bg-panel) 0%, var(--bg-main) 100%);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-main); /* Белый заголовок на темном фоне */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--text-muted);
+}
+
+/* --- Стилизация кнопок --- */
+.btn-primary, .quest-button {
+    display: inline-block;
+    font-family: 'Forum', serif;
+    font-size: 22px;
+    background-color: var(--accent-red);
+    color: var(--text-main);
+    border: 2px solid #3a0e0e;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 1px;
+}
+
+.btn-primary:hover, .quest-button:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 0 15px rgba(114, 24, 23, 0.6);
+    border-color: var(--gold-tan);
+    color: var(--text-main);
+}
+
+.btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--gold-tan);
+    border: 2px solid var(--gold-tan);
+    padding: 8px 16px;
+    font-family: 'Forum', serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--gold-tan);
+    color: var(--bg-main);
+}
+
+/* --- Блок Программ (Арсенал) --- */
+.programs {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* --- Карточки продуктов (Свитки/Панели) --- */
+.card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5); /* Внутреннее затемнение */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-tan);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(194, 151, 107, 0.1);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.card p {
+    margin-bottom: 2rem;
+    min-height: 80px;
+    color: var(--text-muted);
+}
+
+/* Карточка флагмана (выделенная) */
+.highlight-card {
+    border: 2px solid var(--accent-red);
+    background: linear-gradient(145deg, var(--bg-panel) 0%, #261614 100%);
+}
+
+.highlight-card h3 {
+    color: var(--gold-tan);
+}
+
+/* --- Подвал --- */
+.guild-footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--bg-panel);
+    font-family: 'Forum', serif;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}

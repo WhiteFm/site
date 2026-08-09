@@ -1,0 +1,67 @@
+/* =========================================
+   МОБИЛЬНАЯ ВЕРСИЯ (Срабатывает до 800px)
+   ========================================= */
+
+/* Шапка гильдии (Navbar) */
+.navbar {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.logo {
+    margin-bottom: 0.5rem;
+}
+
+/* Навигация переносится на новые строки, если не влезает */
+.navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.navbar nav a {
+    font-size: 1.1rem;
+}
+
+/* Блок приветствия (Hero) */
+.hero {
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+}
+
+.btn-primary, .quest-button {
+    font-size: 18px;
+    padding: 8px 16px;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Арсенал (Карточки) */
+.programs {
+    padding: 2rem 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    padding: 1.5rem 1rem;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}

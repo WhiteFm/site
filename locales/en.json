@@ -1,0 +1,27 @@
+{
+  "nav_home": "Home",
+  "nav_products": "Products",
+  "nav_addons": "Addons",
+  "nav_store": "Store",
+  "nav_ccl": "CCL",
+
+  "hero_title": "Welcome to the Guild",
+  "hero_desc": "Forge your digital legacy. We craft the finest tools, programs, and addons for your grandest adventures.",
+  "hero_btn": "Explore Our Arsenal",
+
+  "programs_title": "Our Mastercrafts",
+
+  "program_1_title": "Project Arcana",
+  "program_1_desc": "A powerful engine designed to streamline your world-building process. Manage lore, items, and quests with ease.",
+
+  "program_2_title": "Forge Warden",
+  "program_2_desc": "The ultimate protection and optimization suite. Keep your projects safe from the darkest bugs and glitches.",
+
+  "program_3_title": "Character Creation List (CCL)",
+  "program_3_desc": "Our flagship independent platform. Breathe life into your heroes with the most detailed generator ever forged.",
+
+  "btn_learn_more": "Learn More",
+  "btn_visit_ccl": "Visit CCL",
+
+  "footer_text": "© WSGuild. All rights reserved by the Council."
+}

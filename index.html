@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WSGuild | Welcome, Adventurer</title>
+
+    <!-- Подключаем основной стиль (для десктопа) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Подключаем МОБИЛЬНЫЙ стиль отдельным файлом (до 800px) -->
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 800px)">
+</head>
+<body>
+
+    <!-- Навигация (Шапка Гильдии) -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <!-- Правильный путь и расширение логотипа -->
+                <img src="Icons/WSGuild.png" alt="WS Guild Logo" class="site-logo">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html" class="active" data-i18n="nav_home">Home</a>
+            <a href="htmls/products.html" data-i18n="nav_products">Products</a>
+            <a href="htmls/addons.html" data-i18n="nav_addons">Addons</a>
+            <!-- Внешние ссылки -->
+            <a href="https://store.wsguild.net" target="_blank" data-i18n="nav_store">Store</a>
+            <a href="https://ccl.wsguild.net" target="_blank" data-i18n="nav_ccl">CCL</a>
+        </nav>
+
+        <!-- Переключатель языков -->
+        <div class="lang-switcher">
+            <button onclick="changeLang('en')" id="btn-en">EN</button>
+            <button onclick="changeLang('ru')" id="btn-ru">RU</button>
+        </div>
+    </header>
+
+    <!-- Главный блок (Вход в таверну/гильдию) -->
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 data-i18n="hero_title">Welcome to the Guild</h1>
+                <p data-i18n="hero_desc">Forge your digital legacy. We craft the finest tools, programs, and addons for your grandest adventures.</p>
+                <a href="#programs" class="btn-primary" data-i18n="hero_btn">Explore Our Arsenal</a>
+            </div>
+        </section>
+
+        <!-- Блок о программах (Арсенал) -->
+        <section id="programs" class="programs">
+            <h2 class="section-title" data-i18n="programs_title">Our Mastercrafts</h2>
+            <div class="grid">
+
+                <!-- Карточка Программы 1 -->
+                <div class="card">
+                    <div class="card-icon">📜</div>
+                    <h3 data-i18n="program_1_title">Project Arcana</h3>
+                    <p data-i18n="program_1_desc">A powerful engine designed to streamline your world-building process. Manage lore, items, and quests with ease.</p>
+                    <a href="htmls/products.html" class="btn-secondary" data-i18n="btn_learn_more">Learn More</a>
+                </div>
+
+                <!-- Карточка Программы 2 -->
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3 data-i18n="program_2_title">Forge Warden</h3>
+                    <p data-i18n="program_2_desc">The ultimate protection and optimization suite. Keep your projects safe from the darkest bugs and glitches.</p>
+                    <a href="htmls/products.html" class="btn-secondary" data-i18n="btn_learn_more">Learn More</a>
+                </div>
+
+                <!-- Карточка Программы 3 (CCL Тизер) -->
+                <div class="card highlight-card">
+                    <div class="card-icon">🧙‍♂️</div>
+                    <h3 data-i18n="program_3_title">Character Creation List (CCL)</h3>
+                    <p data-i18n="program_3_desc">Our flagship independent platform. Breathe life into your heroes with the most detailed generator ever forged.</p>
+                    <a href="https://ccl.wsguild.net" target="_blank" class="btn-secondary" data-i18n="btn_visit_ccl">Visit CCL</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="guild-footer">
+        <p data-i18n="footer_text">© WSGuild. All rights reserved by the Council.</p>
+    </footer>
+
+    <!-- Подключаем скрипт -->
+    <script src="js/main.js"></script>
+</body>
+</html>
