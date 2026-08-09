@@ -12,6 +12,7 @@
         emptyTitle: document.getElementById('video-empty-title'),
         emptyText: document.getElementById('video-empty-text'),
         overlay: document.getElementById('video-overlay'),
+        controls: document.querySelector('.video-controls'),
         play: document.getElementById('player-play'),
         playIcon: document.getElementById('player-play-icon'),
         progress: document.getElementById('player-progress'),
@@ -23,14 +24,20 @@
         nowPlayingIndex: document.getElementById('now-playing-index'),
         nowPlayingTitle: document.getElementById('now-playing-title'),
         nowPlayingDescription: document.getElementById('now-playing-description'),
-        list: document.getElementById('lesson-list')
+        list: document.getElementById('lesson-list'),
+        fullscreenPlaylist: document.querySelector('.fullscreen-playlist'),
+        fullscreenList: document.getElementById('fullscreen-lesson-list')
     };
 
     let lessons = [];
     let activeLessonIndex = -1;
     let translations = window.wsguildTranslations || {};
     let lastAudibleVolume = 1;
+    let controlsHideTimer;
+    let playlistHideTimer;
+    let volumeFlyoutEntered = false;
     const volumeStorageKey = 'wsguild-tutorials-player-volume';
+    const fullscreenUiDelay = 2000;
 
     const text = (key) => translations[key] || '';
 
@@ -109,6 +116,66 @@
         elements.volumeRange.value = muted ? 0 : video.volume;
     };
 
+    const isPlayerFullscreen = () => document.fullscreenElement === elements.shell;
+
+    const hideFullscreenControls = () => {
+        elements.shell.classList.remove('fullscreen-controls-visible');
+    };
+
+    const hideFullscreenPlaylist = () => {
+        elements.shell.classList.remove('fullscreen-playlist-visible');
+    };
+
+    const scheduleControlsHide = () => {
+        clearTimeout(controlsHideTimer);
+
+        if (isPlayerFullscreen()) {
+            controlsHideTimer = setTimeout(hideFullscreenControls, fullscreenUiDelay);
+        }
+    };
+
+    const schedulePlaylistHide = () => {
+        clearTimeout(playlistHideTimer);
+
+        if (isPlayerFullscreen()) {
+            playlistHideTimer = setTimeout(hideFullscreenPlaylist, fullscreenUiDelay);
+        }
+    };
+
+    const showFullscreenControls = () => {
+        if (!isPlayerFullscreen()) {
+            return;
+        }
+
+        elements.shell.classList.add('fullscreen-controls-visible');
+        scheduleControlsHide();
+    };
+
+    const showFullscreenPlaylist = () => {
+        if (!isPlayerFullscreen()) {
+            return;
+        }
+
+        elements.shell.classList.add('fullscreen-playlist-visible');
+        schedulePlaylistHide();
+    };
+
+    const resetFullscreenUi = () => {
+        clearTimeout(controlsHideTimer);
+        clearTimeout(playlistHideTimer);
+        hideFullscreenControls();
+        hideFullscreenPlaylist();
+    };
+
+    const openVolumeFlyout = () => {
+        volumeFlyoutEntered = false;
+        elements.controls.classList.add('volume-flyout-open');
+    };
+
+    const closeVolumeFlyout = () => {
+        elements.controls.classList.remove('volume-flyout-open');
+    };
+
     const setEmptyState = (titleKey, textKey) => {
         elements.empty.hidden = false;
         elements.overlay.hidden = true;
@@ -117,14 +184,14 @@
         setControlsEnabled(false);
     };
 
-    const renderLessons = () => {
-        elements.list.replaceChildren();
+    const renderLessonList = (container) => {
+        container.replaceChildren();
 
         if (lessons.length === 0) {
             const message = document.createElement('p');
             message.className = 'lesson-empty';
             message.textContent = text('tutorials_lessons_empty');
-            elements.list.append(message);
+            container.append(message);
             return;
         }
 
@@ -146,8 +213,12 @@
 
             button.append(number, title, duration);
             button.addEventListener('click', () => selectLesson(index, true));
-            elements.list.append(button);
+            container.append(button);
         });
+    };
+
+    const renderLessons = () => {
+        [elements.list, elements.fullscreenList].forEach(renderLessonList);
     };
 
     const updateCurrentLessonText = () => {
@@ -228,6 +299,18 @@
         }
     });
 
+    elements.volume.addEventListener('mouseenter', openVolumeFlyout);
+    elements.volume.addEventListener('focus', openVolumeFlyout);
+    elements.volumeRange.addEventListener('mouseenter', () => {
+        volumeFlyoutEntered = true;
+    });
+    elements.volumeRange.addEventListener('mouseleave', () => {
+        if (volumeFlyoutEntered) {
+            closeVolumeFlyout();
+        }
+    });
+    elements.volumeRange.addEventListener('blur', closeVolumeFlyout);
+
     elements.volume.addEventListener('click', () => {
         if (video.muted || video.volume === 0) {
             video.muted = false;
@@ -261,6 +344,54 @@
             document.exitFullscreen?.();
         } else {
             elements.shell.requestFullscreen?.();
+        }
+    });
+
+    elements.shell.addEventListener('mousemove', (event) => {
+        if (!isPlayerFullscreen()) {
+            return;
+        }
+
+        const bounds = elements.shell.getBoundingClientRect();
+        const distanceFromBottom = bounds.bottom - event.clientY;
+        const distanceFromRight = bounds.right - event.clientX;
+
+        if (distanceFromBottom <= 140) {
+            showFullscreenControls();
+        }
+
+        if (distanceFromRight <= 110) {
+            showFullscreenPlaylist();
+        }
+    });
+
+    elements.controls.addEventListener('mouseenter', () => {
+        if (isPlayerFullscreen()) {
+            clearTimeout(controlsHideTimer);
+            elements.shell.classList.add('fullscreen-controls-visible');
+        }
+    });
+    elements.controls.addEventListener('mouseleave', scheduleControlsHide);
+    elements.fullscreenPlaylist.addEventListener('mouseenter', () => {
+        if (isPlayerFullscreen()) {
+            clearTimeout(playlistHideTimer);
+            elements.shell.classList.add('fullscreen-playlist-visible');
+        }
+    });
+    elements.fullscreenPlaylist.addEventListener('mouseleave', schedulePlaylistHide);
+
+    document.addEventListener('fullscreenchange', () => {
+        if (isPlayerFullscreen()) {
+            showFullscreenControls();
+            showFullscreenPlaylist();
+        } else {
+            resetFullscreenUi();
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeVolumeFlyout();
         }
     });
 

@@ -607,13 +607,57 @@ h6 {
     bottom: clamp(0.75rem, 2vh, 1.5rem);
     width: min(calc(100vw - 2rem), calc(177.777778vh - 2rem));
     border: 1px solid var(--border-color);
+    visibility: hidden;
+    opacity: 0;
     background: rgba(14, 10, 9, 0.92);
-    transform: translateX(50%);
+    pointer-events: none;
+    transform: translate(50%, calc(100% + 2rem));
     backdrop-filter: blur(10px);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.video-shell:fullscreen.fullscreen-controls-visible .video-controls {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(50%, 0);
 }
 
 .video-shell:fullscreen .now-playing {
     display: none;
+}
+
+.fullscreen-playlist {
+    display: none;
+}
+
+.video-shell:fullscreen .fullscreen-playlist {
+    position: absolute;
+    z-index: 11;
+    top: 50%;
+    right: clamp(0.75rem, 2vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    width: min(340px, calc(100vw - 2rem));
+    max-height: min(72vh, 680px);
+    margin: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(2rem, -50%);
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+}
+
+.video-shell:fullscreen.fullscreen-playlist-visible .fullscreen-playlist {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, -50%);
+}
+
+.video-shell:fullscreen .fullscreen-playlist .lesson-list {
+    overflow-y: auto;
 }
 
 .video-empty,

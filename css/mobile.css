@@ -227,10 +227,7 @@
     transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 }
 
-#player-volume:hover + .volume-range,
-#player-volume:focus + .volume-range,
-.volume-range:hover,
-.volume-range:focus {
+.video-controls.volume-flyout-open .volume-range {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
