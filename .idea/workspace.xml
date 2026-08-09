@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="118eb827-6870-4561-beae-b7b4d41e561c" name="Changes" comment="v0.1">
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locales/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ru.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/index.html" afterDir="false" />
     </list>
@@ -136,7 +133,23 @@
       <option name="project" value="LOCAL" />
       <updated>1786265614955</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786266364635</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1786266364635</updated>
+    </task>
+    <task id="LOCAL-00011" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786266567616</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1786266567616</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
