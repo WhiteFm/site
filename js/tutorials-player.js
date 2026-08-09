@@ -19,13 +19,14 @@
         time: document.getElementById('video-time'),
         volume: document.getElementById('player-volume'),
         volumeIcon: document.getElementById('player-volume-icon'),
+        volumeFlyout: document.getElementById('volume-popover'),
         volumeRange: document.getElementById('volume-range'),
+        volumeValue: document.getElementById('volume-value'),
         fullscreen: document.getElementById('player-fullscreen'),
         nowPlayingIndex: document.getElementById('now-playing-index'),
         nowPlayingTitle: document.getElementById('now-playing-title'),
         nowPlayingDescription: document.getElementById('now-playing-description'),
         list: document.getElementById('lesson-list'),
-        fullscreenPlaylist: document.querySelector('.fullscreen-playlist'),
         fullscreenList: document.getElementById('fullscreen-lesson-list')
     };
 
@@ -33,8 +34,7 @@
     let activeLessonIndex = -1;
     let translations = window.wsguildTranslations || {};
     let lastAudibleVolume = 1;
-    let controlsHideTimer;
-    let playlistHideTimer;
+    let fullscreenIdleTimer;
     let volumeFlyoutEntered = false;
     const volumeStorageKey = 'wsguild-tutorials-player-volume';
     const fullscreenUiDelay = 2000;
@@ -114,31 +114,23 @@
         elements.volumeIcon.textContent = muted ? '◇' : '◆';
         elements.volume.setAttribute('aria-label', text(muted ? 'tutorials_unmute_label' : 'tutorials_mute_label'));
         elements.volumeRange.value = muted ? 0 : video.volume;
+        elements.volumeValue.textContent = `${Math.round((muted ? 0 : video.volume) * 100)}%`;
     };
 
     const isPlayerFullscreen = () => document.fullscreenElement === elements.shell;
 
-    const hideFullscreenControls = () => {
+    const hideFullscreenUi = () => {
         elements.shell.classList.remove('fullscreen-controls-visible');
-    };
-
-    const hideFullscreenPlaylist = () => {
         elements.shell.classList.remove('fullscreen-playlist-visible');
+        elements.shell.classList.add('fullscreen-ui-idle');
+        closeVolumeFlyout();
     };
 
-    const scheduleControlsHide = () => {
-        clearTimeout(controlsHideTimer);
+    const scheduleFullscreenIdle = () => {
+        clearTimeout(fullscreenIdleTimer);
 
         if (isPlayerFullscreen()) {
-            controlsHideTimer = setTimeout(hideFullscreenControls, fullscreenUiDelay);
-        }
-    };
-
-    const schedulePlaylistHide = () => {
-        clearTimeout(playlistHideTimer);
-
-        if (isPlayerFullscreen()) {
-            playlistHideTimer = setTimeout(hideFullscreenPlaylist, fullscreenUiDelay);
+            fullscreenIdleTimer = setTimeout(hideFullscreenUi, fullscreenUiDelay);
         }
     };
 
@@ -147,8 +139,9 @@
             return;
         }
 
+        elements.shell.classList.remove('fullscreen-ui-idle');
         elements.shell.classList.add('fullscreen-controls-visible');
-        scheduleControlsHide();
+        scheduleFullscreenIdle();
     };
 
     const showFullscreenPlaylist = () => {
@@ -156,15 +149,19 @@
             return;
         }
 
+        elements.shell.classList.remove('fullscreen-ui-idle');
+        elements.shell.classList.add('fullscreen-controls-visible');
         elements.shell.classList.add('fullscreen-playlist-visible');
-        schedulePlaylistHide();
+        scheduleFullscreenIdle();
     };
 
     const resetFullscreenUi = () => {
-        clearTimeout(controlsHideTimer);
-        clearTimeout(playlistHideTimer);
-        hideFullscreenControls();
-        hideFullscreenPlaylist();
+        clearTimeout(fullscreenIdleTimer);
+        elements.shell.classList.remove(
+            'fullscreen-controls-visible',
+            'fullscreen-playlist-visible',
+            'fullscreen-ui-idle'
+        );
     };
 
     const openVolumeFlyout = () => {
@@ -304,7 +301,7 @@
     elements.volumeRange.addEventListener('mouseenter', () => {
         volumeFlyoutEntered = true;
     });
-    elements.volumeRange.addEventListener('mouseleave', () => {
+    elements.volumeFlyout.addEventListener('mouseleave', () => {
         if (volumeFlyoutEntered) {
             closeVolumeFlyout();
         }
@@ -353,37 +350,18 @@
         }
 
         const bounds = elements.shell.getBoundingClientRect();
-        const distanceFromBottom = bounds.bottom - event.clientY;
         const distanceFromRight = bounds.right - event.clientX;
 
-        if (distanceFromBottom <= 140) {
-            showFullscreenControls();
-        }
+        showFullscreenControls();
 
-        if (distanceFromRight <= 110) {
+        if (distanceFromRight <= Math.max(120, bounds.width * 0.1)) {
             showFullscreenPlaylist();
         }
     });
-
-    elements.controls.addEventListener('mouseenter', () => {
-        if (isPlayerFullscreen()) {
-            clearTimeout(controlsHideTimer);
-            elements.shell.classList.add('fullscreen-controls-visible');
-        }
-    });
-    elements.controls.addEventListener('mouseleave', scheduleControlsHide);
-    elements.fullscreenPlaylist.addEventListener('mouseenter', () => {
-        if (isPlayerFullscreen()) {
-            clearTimeout(playlistHideTimer);
-            elements.shell.classList.add('fullscreen-playlist-visible');
-        }
-    });
-    elements.fullscreenPlaylist.addEventListener('mouseleave', schedulePlaylistHide);
 
     document.addEventListener('fullscreenchange', () => {
         if (isPlayerFullscreen()) {
             showFullscreenControls();
-            showFullscreenPlaylist();
         } else {
             resetFullscreenUi();
         }
