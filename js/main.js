@@ -1,4 +1,4 @@
-const supportedLanguages = ['en', 'ru'];
+const supportedLanguages = ['en', 'ru', 'sv'];
 const defaultLanguage = 'en';
 let currentLanguage = localStorage.getItem('wsguild_lang') || defaultLanguage;
 
@@ -59,8 +59,10 @@ async function loadTranslations(language) {
         document.documentElement.lang = language;
         document.getElementById('btn-en')?.classList.toggle('active', language === 'en');
         document.getElementById('btn-ru')?.classList.toggle('active', language === 'ru');
+        document.getElementById('btn-sv')?.classList.toggle('active', language === 'sv');
         document.getElementById('btn-en')?.setAttribute('aria-pressed', String(language === 'en'));
         document.getElementById('btn-ru')?.setAttribute('aria-pressed', String(language === 'ru'));
+        document.getElementById('btn-sv')?.setAttribute('aria-pressed', String(language === 'sv'));
     } catch (error) {
         console.error('Unable to load translations.', error);
     }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Forum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&family=EB+Garamond:wght@400;500;600&family=Forum&family=Literata:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
 :root {
     --bg-main: #0a0808;
@@ -13,6 +13,18 @@
     --text-muted: #a39581;
     --border-color: #3b2a22;
     --panel-shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
+    --font-body: 'Alegreya', serif;
+    --font-display: 'Forum', serif;
+}
+
+html[lang='ru'] {
+    --font-body: 'Literata', 'Alegreya', serif;
+    --font-display: 'Cormorant Garamond', 'Forum', serif;
+}
+
+html[lang='sv'] {
+    --font-body: 'Lora', 'Alegreya', serif;
+    --font-display: 'EB Garamond', 'Forum', serif;
 }
 
 * {
@@ -30,7 +42,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-    font-family: 'Alegreya', serif;
+    font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.6;
     color: var(--text-main);
@@ -62,7 +74,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-weight: 400;
     line-height: 1.12;
     color: var(--gold-tan);
@@ -109,7 +121,7 @@ h6 {
 }
 
 .logo-wordmark {
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 1.45rem;
     letter-spacing: 0.08em;
 }
@@ -124,7 +136,7 @@ h6 {
 .navbar nav a {
     position: relative;
     color: var(--text-main);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 1.15rem;
     letter-spacing: 0.045em;
     text-decoration: none;
@@ -166,7 +178,7 @@ h6 {
     border-radius: 3px;
     color: var(--text-muted);
     background: transparent;
-    font: 1rem 'Forum', serif;
+    font: 1rem var(--font-display);
     cursor: pointer;
     transition: 0.25s ease;
 }
@@ -185,7 +197,7 @@ h6 {
 .eyebrow {
     margin-bottom: 0.8rem;
     color: var(--gold-tan);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 0.88rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -275,7 +287,7 @@ h6 {
     justify-content: center;
     min-height: 48px;
     border-radius: 4px;
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 1.12rem;
     letter-spacing: 0.04em;
     text-decoration: none;
@@ -463,30 +475,38 @@ h6 {
 
 .guild-callout {
     display: grid;
-    grid-template-columns: 1.15fr 1fr;
+    grid-template-columns: minmax(0, 1fr);
     align-items: center;
-    gap: 4rem;
+    justify-items: center;
+    gap: 1.5rem;
     width: min(1200px, calc(100% - 4rem));
     margin: 2rem auto 6rem;
     padding: 3rem;
     border: 1px solid var(--border-color);
     border-left: 3px solid var(--accent-red);
+    text-align: center;
     background: rgba(26, 20, 18, 0.72);
 }
 
 .guild-callout h2 {
+    max-width: 980px;
+    margin-inline: auto;
     color: var(--text-main);
     font-size: 2.3rem;
+    text-wrap: balance;
 }
 
 .callout-action > p {
+    max-width: 720px;
+    text-align: center;
     color: var(--text-muted);
 }
 
 .callout-action {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .callout-button {
@@ -814,7 +834,7 @@ h6 {
 .video-time {
     min-width: 94px;
     color: var(--text-muted);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-variant-numeric: tabular-nums;
     text-align: center;
 }
@@ -832,7 +852,7 @@ h6 {
 .volume-value {
     display: none;
     color: var(--gold-light);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 0.82rem;
     font-variant-numeric: tabular-nums;
 }
@@ -849,7 +869,7 @@ h6 {
 
 .now-playing-index {
     color: var(--accent-hover);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 1.05rem;
 }
 
@@ -912,7 +932,7 @@ h6 {
     border-bottom: 1px solid var(--border-color);
     color: var(--text-main);
     background: transparent;
-    font-family: 'Alegreya', serif;
+    font-family: var(--font-body);
     text-align: left;
     cursor: pointer;
     transition: background 0.2s ease;
@@ -929,7 +949,7 @@ h6 {
 
 .lesson-number {
     color: var(--gold-tan);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
 }
 
 .lesson-title {
@@ -967,7 +987,7 @@ h6 {
     border: 1px solid rgba(194, 151, 107, 0.22);
     border-radius: 50%;
     color: rgba(194, 151, 107, 0.28);
-    font: 9rem 'Forum', serif;
+    font: 9rem var(--font-display);
     box-shadow: 0 0 0 32px rgba(194, 151, 107, 0.025), 0 0 0 64px rgba(194, 151, 107, 0.018);
     overflow: hidden;
 }
@@ -1004,7 +1024,7 @@ h6 {
     border: 1px solid var(--accent-red);
     border-radius: 3px;
     color: var(--gold-light);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 0.86rem;
     letter-spacing: 0.09em;
     text-transform: uppercase;
@@ -1087,7 +1107,7 @@ h6 {
     display: block;
     margin-bottom: 1.7rem;
     color: var(--accent-hover);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
 }
 
 .mini-card h3 {
@@ -1132,7 +1152,7 @@ h6 {
     border: 1px solid var(--border-color);
     border-radius: 50%;
     color: var(--gold-tan);
-    font: 2rem 'Forum', serif;
+    font: 2rem var(--font-display);
     background: var(--bg-panel);
 }
 
@@ -1144,7 +1164,7 @@ h6 {
 
 .tool-meta span {
     color: var(--text-muted);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 0.78rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -1188,7 +1208,7 @@ h6 {
     border: 1px solid var(--gold-tan);
     border-radius: 50%;
     color: var(--gold-light);
-    font: 1.5rem 'Forum', serif;
+    font: 1.5rem var(--font-display);
 }
 
 .tool-note h2 {
@@ -1206,7 +1226,7 @@ h6 {
     border-top: 1px solid var(--border-color);
     color: var(--text-muted);
     background: var(--bg-panel);
-    font-family: 'Forum', serif;
+    font-family: var(--font-display);
     font-size: 1rem;
     letter-spacing: 0.035em;
     text-align: center;

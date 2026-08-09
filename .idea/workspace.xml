@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="118eb827-6870-4561-beae-b7b4d41e561c" name="Changes" comment="v0.1">
-      <change beforePath="$PROJECT_DIR$/css/mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mobile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/locales/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/ru.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tutorials/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workshops/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/workshops/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +170,39 @@
       <option name="project" value="LOCAL" />
       <updated>1786276337424</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786278411159</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1786278411159</updated>
+    </task>
+    <task id="LOCAL-00015" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786279004986</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1786279004986</updated>
+    </task>
+    <task id="LOCAL-00016" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786279551029</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1786279551029</updated>
+    </task>
+    <task id="LOCAL-00017" summary="v0.1">
+      <option name="closed" value="true" />
+      <created>1786280264896</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1786280264896</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
