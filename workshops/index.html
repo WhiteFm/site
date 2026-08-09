@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" data-i18n-attr-content="meta_products_description">
+    <title></title>
+    <link rel="icon" type="image/svg+xml" href="/icons/Elipse/Main_Logo.svg">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/mobile.css" media="screen and (max-width: 800px)">
+</head>
+<body data-page-title="meta_products_title">
+    <header class="navbar">
+        <div class="logo">
+            <a href="/" aria-label="" data-i18n-attr-aria-label="aria_home_logo">
+                <img src="/icons/Main_Logo.svg" alt="" class="site-logo" data-i18n-attr-alt="main_logo_alt">
+                <span class="logo-wordmark" data-i18n="brand_name"></span>
+            </a>
+        </div>
+        <nav aria-label="" data-i18n-attr-aria-label="aria_primary_navigation">
+            <a href="/" data-i18n="nav_home"></a>
+            <a href="/workshops/" class="active" aria-current="page" data-i18n="nav_products"></a>
+            <a href="/tools/" data-i18n="nav_tools"></a>
+            <a href="https://store.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_store"></a>
+            <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" data-i18n="nav_ccl"></a>
+        </nav>
+        <div class="lang-switcher" aria-label="" data-i18n-attr-aria-label="aria_language_switcher">
+            <button type="button" onclick="changeLang('en')" id="btn-en" aria-label="" data-i18n="lang_en_short" data-i18n-attr-aria-label="lang_en_label"></button>
+            <button type="button" onclick="changeLang('ru')" id="btn-ru" aria-label="" data-i18n="lang_ru_short" data-i18n-attr-aria-label="lang_ru_label"></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero products-hero">
+            <div class="page-hero-content">
+                <p class="eyebrow" data-i18n="products_eyebrow"></p>
+                <h1 data-i18n="products_title"></h1>
+                <p data-i18n="products_intro"></p>
+            </div>
+            <div class="hero-mark" aria-hidden="true"><img src="/icons/Elipse/Main_Logo.svg" alt=""></div>
+        </section>
+
+        <section class="content-section">
+            <div class="feature-panel product-feature">
+                <div class="feature-copy">
+                    <span class="status-badge" data-i18n="product_status"></span>
+                    <h2 data-i18n="product_ccl_title"></h2>
+                    <p data-i18n="product_ccl_desc"></p>
+                    <ul class="feature-list">
+                        <li data-i18n="product_ccl_feature_1"></li>
+                        <li data-i18n="product_ccl_feature_2"></li>
+                        <li data-i18n="product_ccl_feature_3"></li>
+                    </ul>
+                    <a href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" class="btn-primary" data-i18n="btn_launch_ccl"></a>
+                </div>
+                <a class="feature-emblem" href="https://ccl.wsguild.net" target="_blank" rel="noreferrer" aria-label="" data-i18n-attr-aria-label="product_ccl_title">
+                    <img src="/icons/Elipse/CCL_Logo.svg" alt="" data-i18n-attr-alt="ccl_logo_alt">
+                </a>
+            </div>
+        </section>
+
+        <section class="content-section principles-section">
+            <div class="section-heading align-left">
+                <p class="eyebrow" data-i18n="principles_eyebrow"></p>
+                <h2 class="section-title" data-i18n="principles_title"></h2>
+            </div>
+            <div class="principles-grid">
+                <article class="mini-card">
+                    <span data-i18n="principle_1_number"></span>
+                    <h3 data-i18n="principle_1_title"></h3>
+                    <p data-i18n="principle_1_desc"></p>
+                </article>
+                <article class="mini-card">
+                    <span data-i18n="principle_2_number"></span>
+                    <h3 data-i18n="principle_2_title"></h3>
+                    <p data-i18n="principle_2_desc"></p>
+                </article>
+                <article class="mini-card">
+                    <span data-i18n="principle_3_number"></span>
+                    <h3 data-i18n="principle_3_title"></h3>
+                    <p data-i18n="principle_3_desc"></p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="guild-footer"><p data-i18n="footer_text"></p></footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

@@ -29,6 +29,23 @@ async function loadTranslations(language) {
             }
         });
 
+        document.querySelectorAll('*').forEach((element) => {
+            Array.from(element.attributes).forEach((attribute) => {
+                const prefix = 'data-i18n-attr-';
+
+                if (!attribute.name.startsWith(prefix)) {
+                    return;
+                }
+
+                const targetAttribute = attribute.name.slice(prefix.length);
+                const key = attribute.value;
+
+                if (Object.prototype.hasOwnProperty.call(translations, key)) {
+                    element.setAttribute(targetAttribute, translations[key]);
+                }
+            });
+        });
+
         const titleKey = document.body.dataset.pageTitle;
         if (titleKey && translations[titleKey]) {
             document.title = translations[titleKey];
