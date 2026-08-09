@@ -35,14 +35,9 @@
     padding: 4.5rem 1.25rem;
 }
 
-.hero::before {
-    width: 360px;
-    height: 360px;
-}
-
-.hero::after {
-    width: 270px;
-    height: 270px;
+.hero-background-logo {
+    top: 46%;
+    width: 570px;
 }
 
 .hero h1 {

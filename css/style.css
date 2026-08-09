@@ -202,35 +202,45 @@ h6 {
     border-bottom: 1px solid var(--border-color);
 }
 
-.hero::before,
-.hero::after {
-    position: absolute;
-    border: 1px solid rgba(194, 151, 107, 0.15);
-    border-radius: 50%;
-    content: '';
-    pointer-events: none;
-}
-
-.hero::before {
-    width: 540px;
-    height: 540px;
-}
-
-.hero::after {
-    width: 400px;
-    height: 400px;
-    border-color: rgba(114, 24, 23, 0.28);
-}
-
 .hero-home {
     background:
         radial-gradient(circle at 50% 44%, rgba(114, 24, 23, 0.22), transparent 35%),
         radial-gradient(circle at center, var(--bg-panel) 0%, var(--bg-main) 68%);
 }
 
+.hero-home::after {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    content: '';
+    pointer-events: none;
+    background: radial-gradient(
+        ellipse at 50% 46%,
+        rgba(10, 8, 8, 0.08) 0%,
+        rgba(10, 8, 8, 0.28) 52%,
+        rgba(10, 8, 8, 0.68) 100%
+    );
+}
+
+.hero-background-logo {
+    position: absolute;
+    z-index: 0;
+    top: 48%;
+    left: 50%;
+    width: clamp(540px, 57vw, 780px);
+    max-width: none;
+    /* Видимость фонового логотипа: 0 — скрыт, 1 — полностью видим */
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+    transform: translate(-50%, -50%);
+    filter: saturate(0.55) contrast(0.85) brightness(0.72);
+    mix-blend-mode: soft-light;
+}
+
 .hero-content {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     max-width: 790px;
 }
 
