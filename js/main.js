@@ -2,6 +2,11 @@ const supportedLanguages = ['en', 'ru'];
 const defaultLanguage = 'en';
 let currentLanguage = localStorage.getItem('wsguild_lang') || defaultLanguage;
 
+if (window.location.pathname.endsWith('/index.html')) {
+    const cleanPath = window.location.pathname.slice(0, -'index.html'.length);
+    window.history.replaceState(null, '', cleanPath + window.location.search + window.location.hash);
+}
+
 if (!supportedLanguages.includes(currentLanguage)) {
     currentLanguage = defaultLanguage;
 }
